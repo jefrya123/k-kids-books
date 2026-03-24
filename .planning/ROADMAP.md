@@ -50,8 +50,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — ImageProvider ABC, Flux Kontext provider, factory, version pinning
-- [ ] 02-02-PLAN.md — ImageService orchestration, CLI illustrate command, contact sheet
+- [x] 02-01-PLAN.md — ImageProvider ABC, Flux Kontext provider, factory, version pinning
+- [x] 02-02-PLAN.md — ImageService orchestration, CLI illustrate command, contact sheet
 
 ### Phase 3: Build & PDF
 **Goal**: User can run `uv run bookforge build <slug>` and get all six PDFs — three language editions in both screen and print formats — with correct Korean text rendering, KDP-compliant bleed and DPI, and no crop marks
@@ -63,10 +63,11 @@ Plans:
   3. Print PDFs have 0.125" bleed on all edges, no crop marks, and an embedded sRGB ICC profile — passing KDP's online PDF previewer without rejection
   4. Screen PDFs are RGB with no bleed, sized correctly for digital viewing on Gumroad
   5. `--lang all` builds all six variants in a single command; `--lang en` builds only the two English-edition PDFs
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
+- [ ] 03-01-PLAN.md — Jinja2 templates, CSS, bundled font/ICC assets, and HTML renderer
+- [ ] 03-02-PLAN.md — WeasyPrint PDF export, pikepdf print post-processing, CLI build command
 
 ### Phase 4: Publish & Calendar
 **Goal**: User can run the full end-of-pipeline workflow: review the book and stamp approval, generate a publish package with all PDFs and listing copy ready for manual upload, and view upcoming release deadlines from the content calendar
@@ -92,5 +93,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete    | 2026-03-24 |
 | 2. Image Generation | 2/2 | Complete    | 2026-03-24 |
-| 3. Build & PDF | 0/? | Not started | - |
+| 3. Build & PDF | 0/2 | Not started | - |
 | 4. Publish & Calendar | 0/? | Not started | - |

@@ -107,58 +107,58 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CLI-01 | — | Pending |
-| CLI-02 | — | Pending |
-| CLI-03 | — | Pending |
-| CLI-04 | — | Pending |
-| CLI-05 | — | Pending |
-| CLI-06 | — | Pending |
-| STOR-01 | — | Pending |
-| STOR-02 | — | Pending |
-| STOR-03 | — | Pending |
-| STOR-04 | — | Pending |
-| STOR-05 | — | Pending |
-| STOR-06 | — | Pending |
-| STYL-01 | — | Pending |
-| STYL-02 | — | Pending |
-| STYL-03 | — | Pending |
-| STYL-04 | — | Pending |
-| STYL-05 | — | Pending |
-| IMG-01 | — | Pending |
-| IMG-02 | — | Pending |
-| IMG-03 | — | Pending |
-| IMG-04 | — | Pending |
-| IMG-05 | — | Pending |
-| IMG-06 | — | Pending |
-| IMG-07 | — | Pending |
-| IMG-08 | — | Pending |
-| IMG-09 | — | Pending |
-| BLD-01 | — | Pending |
-| BLD-02 | — | Pending |
-| BLD-03 | — | Pending |
-| BLD-04 | — | Pending |
-| BLD-05 | — | Pending |
-| BLD-06 | — | Pending |
-| BLD-07 | — | Pending |
-| BLD-08 | — | Pending |
-| REV-01 | — | Pending |
-| REV-02 | — | Pending |
-| REV-03 | — | Pending |
-| PUB-01 | — | Pending |
-| PUB-02 | — | Pending |
-| PUB-03 | — | Pending |
-| PUB-04 | — | Pending |
-| PUB-05 | — | Pending |
-| PUB-06 | — | Pending |
-| CAL-01 | — | Pending |
-| CAL-02 | — | Pending |
-| CAL-03 | — | Pending |
+| CLI-01 | Phase 1 | Pending |
+| CLI-02 | Phase 2 | Pending |
+| CLI-03 | Phase 3 | Pending |
+| CLI-04 | Phase 4 | Pending |
+| CLI-05 | Phase 4 | Pending |
+| CLI-06 | Phase 4 | Pending |
+| STOR-01 | Phase 1 | Pending |
+| STOR-02 | Phase 1 | Pending |
+| STOR-03 | Phase 1 | Pending |
+| STOR-04 | Phase 1 | Pending |
+| STOR-05 | Phase 1 | Pending |
+| STOR-06 | Phase 1 | Pending |
+| STYL-01 | Phase 1 | Pending |
+| STYL-02 | Phase 1 | Pending |
+| STYL-03 | Phase 1 | Pending |
+| STYL-04 | Phase 1 | Pending |
+| STYL-05 | Phase 1 | Pending |
+| IMG-01 | Phase 2 | Pending |
+| IMG-02 | Phase 2 | Pending |
+| IMG-03 | Phase 2 | Pending |
+| IMG-04 | Phase 2 | Pending |
+| IMG-05 | Phase 2 | Pending |
+| IMG-06 | Phase 2 | Pending |
+| IMG-07 | Phase 2 | Pending |
+| IMG-08 | Phase 2 | Pending |
+| IMG-09 | Phase 2 | Pending |
+| BLD-01 | Phase 3 | Pending |
+| BLD-02 | Phase 3 | Pending |
+| BLD-03 | Phase 3 | Pending |
+| BLD-04 | Phase 3 | Pending |
+| BLD-05 | Phase 3 | Pending |
+| BLD-06 | Phase 3 | Pending |
+| BLD-07 | Phase 3 | Pending |
+| BLD-08 | Phase 3 | Pending |
+| REV-01 | Phase 4 | Pending |
+| REV-02 | Phase 4 | Pending |
+| REV-03 | Phase 4 | Pending |
+| PUB-01 | Phase 4 | Pending |
+| PUB-02 | Phase 4 | Pending |
+| PUB-03 | Phase 4 | Pending |
+| PUB-04 | Phase 4 | Pending |
+| PUB-05 | Phase 4 | Pending |
+| PUB-06 | Phase 4 | Pending |
+| CAL-01 | Phase 4 | Pending |
+| CAL-02 | Phase 4 | Pending |
+| CAL-03 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 45 total
-- Mapped to phases: 0
-- Unmapped: 45 (roadmap pending)
+- Mapped to phases: 45
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-24*
-*Last updated: 2026-03-24 after initial definition*
+*Last updated: 2026-03-24 after roadmap creation*

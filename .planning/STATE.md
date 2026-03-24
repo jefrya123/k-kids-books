@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-01-PLAN.md
-last_updated: "2026-03-24T20:05:15.975Z"
-last_activity: 2026-03-24 — Completed 01-01 project scaffold
+stopped_at: Completed 01-03-PLAN.md
+last_updated: "2026-03-24T20:08:25Z"
+last_activity: 2026-03-24 — Completed 01-03 style guide loader
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 4
-  completed_plans: 1
-  percent: 25
+  completed_plans: 2
+  percent: 50
 ---
 
 # Project State
@@ -26,24 +26,24 @@ See: .planning/PROJECT.md (updated 2026-03-24)
 ## Current Position
 
 Phase: 1 of 4 (Foundation)
-Plan: 1 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: Executing
-Last activity: 2026-03-24 — Completed 01-01 project scaffold
+Last activity: 2026-03-24 — Completed 01-03 style guide loader
 
-Progress: [███░░░░░░░] 25%
+Progress: [████████░░] 75%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
+- Total plans completed: 3
 - Average duration: 2min
-- Total execution time: 2min
+- Total execution time: 6min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1. Foundation | 1/4 | 2min | 2min |
+| 1. Foundation | 2/4 | 4min | 2min |
 
 **Recent Trend:**
 - Last 5 plans: —
@@ -63,6 +63,9 @@ Recent decisions affecting current work:
 - PDF approach: WeasyPrint HTML-to-PDF + pikepdf post-processing for print compliance
 - Phase 2 research flag: Flux Kontext character fidelity requires empirical validation before treating Phase 2 as complete
 - [Phase 01-01]: Typer callback pattern for CLI with no subcommands yet
+- [Phase 01-03]: JSON round-trip to convert ruamel CommentedMap to plain dict for Pydantic validation
+- [Phase 01-02]: Targeted comment extraction in parser -- only strips ko/image/image-override, preserves other HTML comments
+- [Phase 01-02]: Soft validator pattern -- returns warning strings, not exceptions
 
 ### Pending Todos
 
@@ -76,5 +79,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-24
-Stopped at: Completed 01-01-PLAN.md
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None

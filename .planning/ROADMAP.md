@@ -89,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/4 | Planning complete | - |
+| 1. Foundation | 3/4 | In Progress|  |
 | 2. Image Generation | 0/? | Not started | - |
 | 3. Build & PDF | 0/? | Not started | - |
 | 4. Publish & Calendar | 0/? | Not started | - |

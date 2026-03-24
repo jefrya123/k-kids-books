@@ -17,9 +17,9 @@
 ### Story & Content
 
 - [x] **STOR-01**: Story markdown format with YAML frontmatter (title, title_ko, slug, trim_size, price, ages)
-- [ ] **STOR-02**: Page boundaries defined by `## Page N` headers in story.md
-- [ ] **STOR-03**: English text is bare, Korean text wrapped in `<!-- ko -->` / `<!-- /ko -->` blocks
-- [ ] **STOR-04**: Image prompts embedded as `<!-- image: ... -->` comments per page
+- [x] **STOR-02**: Page boundaries defined by `## Page N` headers in story.md
+- [x] **STOR-03**: English text is bare, Korean text wrapped in `<!-- ko -->` / `<!-- /ko -->` blocks
+- [x] **STOR-04**: Image prompts embedded as `<!-- image: ... -->` comments per page
 - [ ] **STOR-05**: Claude API generates bilingual draft story from a one-line prompt via `new` command
 - [x] **STOR-06**: Image prompt overrides saved as `<!-- image-override: ... -->` when using `--redo --prompt`
 
@@ -114,9 +114,9 @@
 | CLI-05 | Phase 4 | Pending |
 | CLI-06 | Phase 4 | Pending |
 | STOR-01 | Phase 1 | Complete |
-| STOR-02 | Phase 1 | Pending |
-| STOR-03 | Phase 1 | Pending |
-| STOR-04 | Phase 1 | Pending |
+| STOR-02 | Phase 1 | Complete |
+| STOR-03 | Phase 1 | Complete |
+| STOR-04 | Phase 1 | Complete |
 | STOR-05 | Phase 1 | Pending |
 | STOR-06 | Phase 1 | Complete |
 | STYL-01 | Phase 1 | Complete |

@@ -12,7 +12,7 @@
 - [x] **CLI-03**: User can run `uv run bookforge build <slug>` to assemble HTML and export PDFs
 - [x] **CLI-04**: User can run `uv run bookforge review <slug>` to run pre-publish review checklist
 - [ ] **CLI-05**: User can run `uv run bookforge publish <slug>` to generate publish package
-- [ ] **CLI-06**: User can run `uv run bookforge calendar` to view upcoming release deadlines
+- [x] **CLI-06**: User can run `uv run bookforge calendar` to view upcoming release deadlines
 
 ### Story & Content
 
@@ -68,9 +68,9 @@
 
 ### Content Calendar
 
-- [ ] **CAL-01**: content-calendar.yaml with holiday name, holiday date, release date, marketing start per book
-- [ ] **CAL-02**: Calendar command displays upcoming releases with backward-planned deadlines
-- [ ] **CAL-03**: Release dates target 2-3 weeks before holidays
+- [x] **CAL-01**: content-calendar.yaml with holiday name, holiday date, release date, marketing start per book
+- [x] **CAL-02**: Calendar command displays upcoming releases with backward-planned deadlines
+- [x] **CAL-03**: Release dates target 2-3 weeks before holidays
 
 ## v2 Requirements
 
@@ -112,7 +112,7 @@
 | CLI-03 | Phase 3 | Complete |
 | CLI-04 | Phase 4 | Complete |
 | CLI-05 | Phase 4 | Pending |
-| CLI-06 | Phase 4 | Pending |
+| CLI-06 | Phase 4 | Complete |
 | STOR-01 | Phase 1 | Complete |
 | STOR-02 | Phase 1 | Complete |
 | STOR-03 | Phase 1 | Complete |
@@ -150,9 +150,9 @@
 | PUB-04 | Phase 4 | Pending |
 | PUB-05 | Phase 4 | Pending |
 | PUB-06 | Phase 4 | Pending |
-| CAL-01 | Phase 4 | Pending |
-| CAL-02 | Phase 4 | Pending |
-| CAL-03 | Phase 4 | Pending |
+| CAL-01 | Phase 4 | Complete |
+| CAL-02 | Phase 4 | Complete |
+| CAL-03 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 45 total

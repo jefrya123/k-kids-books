@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 04-01-PLAN.md
-last_updated: "2026-03-24T21:22:17.992Z"
-last_activity: 2026-03-24 — Completed 04-01 review command
+stopped_at: Completed 04-02-PLAN.md
+last_updated: "2026-03-24T21:22:27Z"
+last_activity: 2026-03-24 — Completed 04-02 calendar command
 progress:
   total_phases: 4
   completed_phases: 3
   total_plans: 11
-  completed_plans: 9
-  percent: 82
+  completed_plans: 10
+  percent: 91
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Consistent, high-quality children's book illustrations from a single markdown file — books that look hand-illustrated, not AI-generated, with characters recognizably the same across all pages.
-**Current focus:** Phase 4 in progress — Review command done, calendar and publish remaining.
+**Current focus:** Phase 4 in progress — Review and calendar done, publish remaining.
 
 ## Current Position
 
 Phase: 4 of 4 (Publish & Calendar)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In Progress
-Last activity: 2026-03-24 — Completed 04-01 review command
+Last activity: 2026-03-24 — Completed 04-02 calendar command
 
-Progress: [████████░░] 82%
+Progress: [█████████░] 91%
 
 ## Performance Metrics
 
@@ -56,6 +56,7 @@ Progress: [████████░░] 82%
 | Phase 03 P01 | 5min | 2 tasks | 12 files |
 | Phase 03 P02 | 4min | 2 tasks | 6 files |
 | Phase 04 P01 | 2min | 2 tasks | 5 files |
+| Phase 04 P02 | 3min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -84,6 +85,8 @@ Recent decisions affecting current work:
 - [Phase 03-02]: WeasyPrint natively sets TrimBox/BleedBox -- screen PDF differentiated by ICC OutputIntent absence
 - [Phase 03-02]: Default build is bilingual edition (screen+print), not all 6 editions
 - [Phase 04-01]: Rich Table for summary display; approval stamps full review_summary dict into state.json
+- [Phase 04-02]: Console width=200 for Rich table to prevent truncation in narrow terminals
+- [Phase 04-02]: Pydantic BaseModel for CalendarEntry; JSON round-trip for ruamel CommentedMap (same as style loader)
 
 ### Pending Todos
 
@@ -96,6 +99,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T21:22:17.989Z
-Stopped at: Completed 04-01-PLAN.md
+Last session: 2026-03-24T21:22:27Z
+Stopped at: Completed 04-02-PLAN.md
 Resume file: None

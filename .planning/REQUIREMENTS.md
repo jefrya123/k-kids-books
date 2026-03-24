@@ -8,7 +8,7 @@
 ### CLI Foundation
 
 - [x] **CLI-01**: User can run `uv run bookforge new <slug>` to scaffold a new book directory with story.md template
-- [ ] **CLI-02**: User can run `uv run bookforge illustrate <slug>` to generate images for all pages
+- [x] **CLI-02**: User can run `uv run bookforge illustrate <slug>` to generate images for all pages
 - [ ] **CLI-03**: User can run `uv run bookforge build <slug>` to assemble HTML and export PDFs
 - [ ] **CLI-04**: User can run `uv run bookforge review <slug>` to run pre-publish review checklist
 - [ ] **CLI-05**: User can run `uv run bookforge publish <slug>` to generate publish package
@@ -35,12 +35,12 @@
 
 - [x] **IMG-01**: Flux Kontext Pro (via Replicate) as default image provider with character reference images
 - [x] **IMG-02**: Abstract image provider interface allowing provider swap via config change
-- [ ] **IMG-03**: Generate one illustration per page (~10-12 per book) plus cover image
-- [ ] **IMG-04**: `--redo N,N` flag to regenerate specific pages without regenerating all
-- [ ] **IMG-05**: Image versioning — regenerated images saved alongside originals (page-03-v1.png, v2.png)
-- [ ] **IMG-06**: HTML contact sheet generated after illustration for quick visual review
-- [ ] **IMG-07**: Skip already-generated images on re-run (resume support)
-- [ ] **IMG-08**: Retry transient API failures up to 3 times with exponential backoff
+- [x] **IMG-03**: Generate one illustration per page (~10-12 per book) plus cover image
+- [x] **IMG-04**: `--redo N,N` flag to regenerate specific pages without regenerating all
+- [x] **IMG-05**: Image versioning — regenerated images saved alongside originals (page-03-v1.png, v2.png)
+- [x] **IMG-06**: HTML contact sheet generated after illustration for quick visual review
+- [x] **IMG-07**: Skip already-generated images on re-run (resume support)
+- [x] **IMG-08**: Retry transient API failures up to 3 times with exponential backoff
 - [x] **IMG-09**: Pin Replicate model version hash for reproducibility
 
 ### Build & PDF
@@ -108,7 +108,7 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | CLI-01 | Phase 1 | Complete |
-| CLI-02 | Phase 2 | Pending |
+| CLI-02 | Phase 2 | Complete |
 | CLI-03 | Phase 3 | Pending |
 | CLI-04 | Phase 4 | Pending |
 | CLI-05 | Phase 4 | Pending |
@@ -126,12 +126,12 @@
 | STYL-05 | Phase 1 | Complete |
 | IMG-01 | Phase 2 | Complete |
 | IMG-02 | Phase 2 | Complete |
-| IMG-03 | Phase 2 | Pending |
-| IMG-04 | Phase 2 | Pending |
-| IMG-05 | Phase 2 | Pending |
-| IMG-06 | Phase 2 | Pending |
-| IMG-07 | Phase 2 | Pending |
-| IMG-08 | Phase 2 | Pending |
+| IMG-03 | Phase 2 | Complete |
+| IMG-04 | Phase 2 | Complete |
+| IMG-05 | Phase 2 | Complete |
+| IMG-06 | Phase 2 | Complete |
+| IMG-07 | Phase 2 | Complete |
+| IMG-08 | Phase 2 | Complete |
 | IMG-09 | Phase 2 | Complete |
 | BLD-01 | Phase 3 | Pending |
 | BLD-02 | Phase 3 | Pending |

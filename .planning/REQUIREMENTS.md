@@ -9,7 +9,7 @@
 
 - [x] **CLI-01**: User can run `uv run bookforge new <slug>` to scaffold a new book directory with story.md template
 - [x] **CLI-02**: User can run `uv run bookforge illustrate <slug>` to generate images for all pages
-- [ ] **CLI-03**: User can run `uv run bookforge build <slug>` to assemble HTML and export PDFs
+- [x] **CLI-03**: User can run `uv run bookforge build <slug>` to assemble HTML and export PDFs
 - [ ] **CLI-04**: User can run `uv run bookforge review <slug>` to run pre-publish review checklist
 - [ ] **CLI-05**: User can run `uv run bookforge publish <slug>` to generate publish package
 - [ ] **CLI-06**: User can run `uv run bookforge calendar` to view upcoming release deadlines
@@ -46,12 +46,12 @@
 ### Build & PDF
 
 - [x] **BLD-01**: Three language editions from one story.md: `--lang en`, `--lang ko`, `--lang bilingual` (default)
-- [ ] **BLD-02**: `--lang all` builds all 6 PDFs (3 editions x 2 formats)
-- [ ] **BLD-03**: Screen PDF: RGB, no bleed, optimized for digital viewing (Gumroad)
-- [ ] **BLD-04**: Print PDF: RGB with sRGB ICC profile (via pikepdf), 0.125" bleed, 300 DPI (KDP)
+- [x] **BLD-02**: `--lang all` builds all 6 PDFs (3 editions x 2 formats)
+- [x] **BLD-03**: Screen PDF: RGB, no bleed, optimized for digital viewing (Gumroad)
+- [x] **BLD-04**: Print PDF: RGB with sRGB ICC profile (via pikepdf), 0.125" bleed, 300 DPI (KDP)
 - [x] **BLD-05**: HTML template with Jinja2 assembling story text + images per page
 - [x] **BLD-06**: Korean font (Noto Sans KR) embedded via @font-face for reliable CJK rendering
-- [ ] **BLD-07**: No crop marks in print PDF (KDP rejects them)
+- [x] **BLD-07**: No crop marks in print PDF (KDP rejects them)
 - [x] **BLD-08**: Default trim size 8.5x8.5" square, configurable per book in frontmatter
 
 ### Review & Publish
@@ -109,7 +109,7 @@
 |-------------|-------|--------|
 | CLI-01 | Phase 1 | Complete |
 | CLI-02 | Phase 2 | Complete |
-| CLI-03 | Phase 3 | Pending |
+| CLI-03 | Phase 3 | Complete |
 | CLI-04 | Phase 4 | Pending |
 | CLI-05 | Phase 4 | Pending |
 | CLI-06 | Phase 4 | Pending |
@@ -134,12 +134,12 @@
 | IMG-08 | Phase 2 | Complete |
 | IMG-09 | Phase 2 | Complete |
 | BLD-01 | Phase 3 | Complete |
-| BLD-02 | Phase 3 | Pending |
-| BLD-03 | Phase 3 | Pending |
-| BLD-04 | Phase 3 | Pending |
+| BLD-02 | Phase 3 | Complete |
+| BLD-03 | Phase 3 | Complete |
+| BLD-04 | Phase 3 | Complete |
 | BLD-05 | Phase 3 | Complete |
 | BLD-06 | Phase 3 | Complete |
-| BLD-07 | Phase 3 | Pending |
+| BLD-07 | Phase 3 | Complete |
 | BLD-08 | Phase 3 | Complete |
 | REV-01 | Phase 4 | Pending |
 | REV-02 | Phase 4 | Pending |

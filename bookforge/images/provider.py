@@ -13,6 +13,7 @@ class ImageRequest:
 
     prompt: str
     reference_images: list[Path]
+    output_path: Path = Path("output.png")
     width: int = 1024
     height: int = 1024
     output_format: str = "png"

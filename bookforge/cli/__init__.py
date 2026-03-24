@@ -2,6 +2,7 @@
 
 import typer
 
+from bookforge.cli.illustrate import illustrate_command
 from bookforge.cli.new import new_command
 
 app = typer.Typer(
@@ -11,6 +12,7 @@ app = typer.Typer(
 )
 
 app.command("new")(new_command)
+app.command("illustrate")(illustrate_command)
 
 
 @app.callback(invoke_without_command=True)

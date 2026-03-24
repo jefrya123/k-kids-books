@@ -16,20 +16,20 @@
 
 ### Story & Content
 
-- [ ] **STOR-01**: Story markdown format with YAML frontmatter (title, title_ko, slug, trim_size, price, ages)
+- [x] **STOR-01**: Story markdown format with YAML frontmatter (title, title_ko, slug, trim_size, price, ages)
 - [ ] **STOR-02**: Page boundaries defined by `## Page N` headers in story.md
 - [ ] **STOR-03**: English text is bare, Korean text wrapped in `<!-- ko -->` / `<!-- /ko -->` blocks
 - [ ] **STOR-04**: Image prompts embedded as `<!-- image: ... -->` comments per page
 - [ ] **STOR-05**: Claude API generates bilingual draft story from a one-line prompt via `new` command
-- [ ] **STOR-06**: Image prompt overrides saved as `<!-- image-override: ... -->` when using `--redo --prompt`
+- [x] **STOR-06**: Image prompt overrides saved as `<!-- image-override: ... -->` when using `--redo --prompt`
 
 ### Style & Consistency
 
-- [ ] **STYL-01**: Style guide YAML defines art style name, prompt prefix, color palette, negative prompt
-- [ ] **STYL-02**: Character definitions in style guide with visual description and reference image paths
+- [x] **STYL-01**: Style guide YAML defines art style name, prompt prefix, color palette, negative prompt
+- [x] **STYL-02**: Character definitions in style guide with visual description and reference image paths
 - [ ] **STYL-03**: Ho-rang (tiger) and Gom-i (bear) character sheets generated upfront as reference images
 - [ ] **STYL-04**: Every image generation call prepends style prefix + character descriptions + negative prompt
-- [ ] **STYL-05**: Image provider configured in style guide YAML (provider-agnostic layer)
+- [x] **STYL-05**: Image provider configured in style guide YAML (provider-agnostic layer)
 
 ### Image Generation
 
@@ -113,17 +113,17 @@
 | CLI-04 | Phase 4 | Pending |
 | CLI-05 | Phase 4 | Pending |
 | CLI-06 | Phase 4 | Pending |
-| STOR-01 | Phase 1 | Pending |
+| STOR-01 | Phase 1 | Complete |
 | STOR-02 | Phase 1 | Pending |
 | STOR-03 | Phase 1 | Pending |
 | STOR-04 | Phase 1 | Pending |
 | STOR-05 | Phase 1 | Pending |
-| STOR-06 | Phase 1 | Pending |
-| STYL-01 | Phase 1 | Pending |
-| STYL-02 | Phase 1 | Pending |
+| STOR-06 | Phase 1 | Complete |
+| STYL-01 | Phase 1 | Complete |
+| STYL-02 | Phase 1 | Complete |
 | STYL-03 | Phase 1 | Pending |
 | STYL-04 | Phase 1 | Pending |
-| STYL-05 | Phase 1 | Pending |
+| STYL-05 | Phase 1 | Complete |
 | IMG-01 | Phase 2 | Pending |
 | IMG-02 | Phase 2 | Pending |
 | IMG-03 | Phase 2 | Pending |

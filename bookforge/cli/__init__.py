@@ -2,11 +2,15 @@
 
 import typer
 
+from bookforge.cli.new import new_command
+
 app = typer.Typer(
     name="bookforge",
     help="Bilingual children's book production pipeline.",
     no_args_is_help=True,
 )
+
+app.command("new")(new_command)
 
 
 @app.callback(invoke_without_command=True)

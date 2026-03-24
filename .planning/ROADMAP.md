@@ -32,10 +32,10 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 4 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Project scaffold, Pydantic schemas, test fixtures
-- [ ] 01-02-PLAN.md — Story parser and validator
+- [x] 01-01-PLAN.md — Project scaffold, Pydantic schemas, test fixtures
+- [x] 01-02-PLAN.md — Story parser and validator
 - [x] 01-03-PLAN.md — Style guide loader and default style guide YAML
-- [ ] 01-04-PLAN.md — CLI new command and Claude story generator
+- [x] 01-04-PLAN.md — CLI new command and Claude story generator
 
 ### Phase 2: Image Generation
 **Goal**: User can run `uv run bookforge illustrate <slug>` and get one AI-generated illustration per page with consistent character appearance, with the ability to resume interrupted runs and redo specific pages
@@ -47,10 +47,11 @@ Plans:
   3. User can run `illustrate --redo 3,7` to regenerate only pages 3 and 7 without touching other pages; regenerated images are saved as versioned files (page-03-v2.png)
   4. Transient Replicate API failures retry up to 3 times with exponential backoff; the run does not abort on a single page failure
   5. An HTML contact sheet is generated after illustration completes, showing all page images for quick visual review of character consistency
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: TBD
+- [ ] 02-01-PLAN.md — ImageProvider ABC, Flux Kontext provider, factory, version pinning
+- [ ] 02-02-PLAN.md — ImageService orchestration, CLI illustrate command, contact sheet
 
 ### Phase 3: Build & PDF
 **Goal**: User can run `uv run bookforge build <slug>` and get all six PDFs — three language editions in both screen and print formats — with correct Korean text rendering, KDP-compliant bleed and DPI, and no crop marks
@@ -89,7 +90,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 3/4 | Complete    | 2026-03-24 |
-| 2. Image Generation | 0/? | Not started | - |
+| 1. Foundation | 4/4 | Complete    | 2026-03-24 |
+| 2. Image Generation | 0/2 | Not started | - |
 | 3. Build & PDF | 0/? | Not started | - |
 | 4. Publish & Calendar | 0/? | Not started | - |

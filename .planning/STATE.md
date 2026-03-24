@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: Completed 02-02-PLAN.md
+status: in-progress
+stopped_at: Completed 03-01-PLAN.md
 last_updated: "2026-03-24T20:44:28.834Z"
-last_activity: 2026-03-24 — Completed 02-02 ImageService orchestration + CLI illustrate
+last_activity: 2026-03-24 — Completed 03-01 HTML templates and renderer
 progress:
   total_phases: 4
   completed_phases: 2
   total_plans: 6
-  completed_plans: 6
-  percent: 100
+  completed_plans: 7
+  percent: 70
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Consistent, high-quality children's book illustrations from a single markdown file — books that look hand-illustrated, not AI-generated, with characters recognizably the same across all pages.
-**Current focus:** Phase 2 — Image Generation
+**Current focus:** Phase 3 — Build & PDF
 
 ## Current Position
 
-Phase: 2 of 4 (Image Generation) -- COMPLETE
-Plan: 2 of 2 in current phase
-Status: Phase Complete
-Last activity: 2026-03-24 — Completed 02-02 ImageService orchestration + CLI illustrate
+Phase: 3 of 4 (Build & PDF)
+Plan: 1 of 2 in current phase
+Status: In Progress
+Last activity: 2026-03-24 — Completed 03-01 HTML templates and renderer
 
-Progress: [██████████] 100%
+Progress: [███████░░░] 70%
 
 ## Performance Metrics
 
@@ -53,6 +53,7 @@ Progress: [██████████] 100%
 | Phase 01 P04 | 2min | 2 tasks | 5 files |
 | Phase 02 P01 | 2min | 2 tasks | 6 files |
 | Phase 02 P02 | 4min | 2 tasks | 7 files |
+| Phase 03 P01 | 5min | 2 tasks | 12 files |
 
 ## Accumulated Context
 
@@ -74,6 +75,10 @@ Recent decisions affecting current work:
 - [Phase 02]: Aspect ratio derived from width/height via GCD reduction with fallback to 1:1
 - [Phase 02]: Provider ABC pattern: ImageProvider with abstract generate() and provider_name
 - [Phase 02-02]: Batch size of 3 for asyncio.gather; state written atomically per page; ModelError fails immediately without retry
+- [Phase 03-01]: Single Jinja2 template with edition variable for language filtering via != conditionals
+- [Phase 03-01]: CSS dimensions injected as Jinja2 variables -- no hardcoded sizes
+- [Phase 03-01]: Used system sRGB.icc from colord package (color.org download blocked by 403)
+- [Phase 03-01]: Font path resolved as file:// URI for WeasyPrint compatibility
 
 ### Pending Todos
 
@@ -86,6 +91,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T20:41:48.548Z
-Stopped at: Completed 02-02-PLAN.md
+Last session: 2026-03-24T21:03:04Z
+Stopped at: Completed 03-01-PLAN.md
 Resume file: None

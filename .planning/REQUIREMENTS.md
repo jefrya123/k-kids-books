@@ -45,14 +45,14 @@
 
 ### Build & PDF
 
-- [ ] **BLD-01**: Three language editions from one story.md: `--lang en`, `--lang ko`, `--lang bilingual` (default)
+- [x] **BLD-01**: Three language editions from one story.md: `--lang en`, `--lang ko`, `--lang bilingual` (default)
 - [ ] **BLD-02**: `--lang all` builds all 6 PDFs (3 editions x 2 formats)
 - [ ] **BLD-03**: Screen PDF: RGB, no bleed, optimized for digital viewing (Gumroad)
 - [ ] **BLD-04**: Print PDF: RGB with sRGB ICC profile (via pikepdf), 0.125" bleed, 300 DPI (KDP)
-- [ ] **BLD-05**: HTML template with Jinja2 assembling story text + images per page
-- [ ] **BLD-06**: Korean font (Noto Sans KR) embedded via @font-face for reliable CJK rendering
+- [x] **BLD-05**: HTML template with Jinja2 assembling story text + images per page
+- [x] **BLD-06**: Korean font (Noto Sans KR) embedded via @font-face for reliable CJK rendering
 - [ ] **BLD-07**: No crop marks in print PDF (KDP rejects them)
-- [ ] **BLD-08**: Default trim size 8.5x8.5" square, configurable per book in frontmatter
+- [x] **BLD-08**: Default trim size 8.5x8.5" square, configurable per book in frontmatter
 
 ### Review & Publish
 
@@ -133,14 +133,14 @@
 | IMG-07 | Phase 2 | Complete |
 | IMG-08 | Phase 2 | Complete |
 | IMG-09 | Phase 2 | Complete |
-| BLD-01 | Phase 3 | Pending |
+| BLD-01 | Phase 3 | Complete |
 | BLD-02 | Phase 3 | Pending |
 | BLD-03 | Phase 3 | Pending |
 | BLD-04 | Phase 3 | Pending |
-| BLD-05 | Phase 3 | Pending |
-| BLD-06 | Phase 3 | Pending |
+| BLD-05 | Phase 3 | Complete |
+| BLD-06 | Phase 3 | Complete |
 | BLD-07 | Phase 3 | Pending |
-| BLD-08 | Phase 3 | Pending |
+| BLD-08 | Phase 3 | Complete |
 | REV-01 | Phase 4 | Pending |
 | REV-02 | Phase 4 | Pending |
 | REV-03 | Phase 4 | Pending |

@@ -10,7 +10,7 @@
 - [x] **CLI-01**: User can run `uv run bookforge new <slug>` to scaffold a new book directory with story.md template
 - [x] **CLI-02**: User can run `uv run bookforge illustrate <slug>` to generate images for all pages
 - [x] **CLI-03**: User can run `uv run bookforge build <slug>` to assemble HTML and export PDFs
-- [ ] **CLI-04**: User can run `uv run bookforge review <slug>` to run pre-publish review checklist
+- [x] **CLI-04**: User can run `uv run bookforge review <slug>` to run pre-publish review checklist
 - [ ] **CLI-05**: User can run `uv run bookforge publish <slug>` to generate publish package
 - [ ] **CLI-06**: User can run `uv run bookforge calendar` to view upcoming release deadlines
 
@@ -56,9 +56,9 @@
 
 ### Review & Publish
 
-- [ ] **REV-01**: Review command shows summary (page count, image count, word count EN/KR, file sizes)
-- [ ] **REV-02**: Review prints checklist (story quality, Korean proofread, image consistency, cover strength)
-- [ ] **REV-03**: Review requires explicit `y/n` approval, stamps approval into book state
+- [x] **REV-01**: Review command shows summary (page count, image count, word count EN/KR, file sizes)
+- [x] **REV-02**: Review prints checklist (story quality, Korean proofread, image consistency, cover strength)
+- [x] **REV-03**: Review requires explicit `y/n` approval, stamps approval into book state
 - [ ] **PUB-01**: Publish only runs if review approved
 - [ ] **PUB-02**: Generates `publish-package/` with all PDFs, cover images (Gumroad thumb, KDP cover, 1080x1080 social)
 - [ ] **PUB-03**: Auto-generates listing copy (title, description, price) for copy-paste into Gumroad/KDP
@@ -110,7 +110,7 @@
 | CLI-01 | Phase 1 | Complete |
 | CLI-02 | Phase 2 | Complete |
 | CLI-03 | Phase 3 | Complete |
-| CLI-04 | Phase 4 | Pending |
+| CLI-04 | Phase 4 | Complete |
 | CLI-05 | Phase 4 | Pending |
 | CLI-06 | Phase 4 | Pending |
 | STOR-01 | Phase 1 | Complete |
@@ -141,9 +141,9 @@
 | BLD-06 | Phase 3 | Complete |
 | BLD-07 | Phase 3 | Complete |
 | BLD-08 | Phase 3 | Complete |
-| REV-01 | Phase 4 | Pending |
-| REV-02 | Phase 4 | Pending |
-| REV-03 | Phase 4 | Pending |
+| REV-01 | Phase 4 | Complete |
+| REV-02 | Phase 4 | Complete |
+| REV-03 | Phase 4 | Complete |
 | PUB-01 | Phase 4 | Pending |
 | PUB-02 | Phase 4 | Pending |
 | PUB-03 | Phase 4 | Pending |

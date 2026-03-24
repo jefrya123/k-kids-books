@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: Completed 03-02-PLAN.md
-last_updated: "2026-03-24T21:13:22.612Z"
-last_activity: 2026-03-24 — Completed 03-02 PDF export and CLI build command
+status: executing
+stopped_at: Completed 04-01-PLAN.md
+last_updated: "2026-03-24T21:22:17.992Z"
+last_activity: 2026-03-24 — Completed 04-01 review command
 progress:
   total_phases: 4
   completed_phases: 3
-  total_plans: 8
-  completed_plans: 8
-  percent: 100
+  total_plans: 11
+  completed_plans: 9
+  percent: 82
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Consistent, high-quality children's book illustrations from a single markdown file — books that look hand-illustrated, not AI-generated, with characters recognizably the same across all pages.
-**Current focus:** Phase 3 complete — Build & PDF done. Ready for Phase 4.
+**Current focus:** Phase 4 in progress — Review command done, calendar and publish remaining.
 
 ## Current Position
 
-Phase: 3 of 4 (Build & PDF) -- COMPLETE
-Plan: 2 of 2 in current phase
-Status: Phase 3 Complete
-Last activity: 2026-03-24 — Completed 03-02 PDF export and CLI build command
+Phase: 4 of 4 (Publish & Calendar)
+Plan: 1 of 3 in current phase
+Status: In Progress
+Last activity: 2026-03-24 — Completed 04-01 review command
 
-Progress: [██████████] 100%
+Progress: [████████░░] 82%
 
 ## Performance Metrics
 
@@ -55,6 +55,7 @@ Progress: [██████████] 100%
 | Phase 02 P02 | 4min | 2 tasks | 7 files |
 | Phase 03 P01 | 5min | 2 tasks | 12 files |
 | Phase 03 P02 | 4min | 2 tasks | 6 files |
+| Phase 04 P01 | 2min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -82,6 +83,7 @@ Recent decisions affecting current work:
 - [Phase 03-01]: Font path resolved as file:// URI for WeasyPrint compatibility
 - [Phase 03-02]: WeasyPrint natively sets TrimBox/BleedBox -- screen PDF differentiated by ICC OutputIntent absence
 - [Phase 03-02]: Default build is bilingual edition (screen+print), not all 6 editions
+- [Phase 04-01]: Rich Table for summary display; approval stamps full review_summary dict into state.json
 
 ### Pending Todos
 
@@ -94,6 +96,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T21:10:08.508Z
-Stopped at: Completed 03-02-PLAN.md
+Last session: 2026-03-24T21:22:17.989Z
+Stopped at: Completed 04-01-PLAN.md
 Resume file: None

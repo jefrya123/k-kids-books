@@ -29,10 +29,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. A story.md file with YAML frontmatter, page boundaries, bilingual text blocks, and image prompts parses without error into a validated Book dataclass
   4. Style guide YAML with character definitions, prompt prefix, color palette, and provider config loads and validates via Pydantic at startup
   5. Character reference image paths defined in the style guide are resolved and accessible before any illustration command runs
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 01-01: TBD
+- [ ] 01-01-PLAN.md — Project scaffold, Pydantic schemas, test fixtures
+- [ ] 01-02-PLAN.md — Story parser and validator
+- [ ] 01-03-PLAN.md — Style guide loader and default style guide YAML
+- [ ] 01-04-PLAN.md — CLI new command and Claude story generator
 
 ### Phase 2: Image Generation
 **Goal**: User can run `uv run bookforge illustrate <slug>` and get one AI-generated illustration per page with consistent character appearance, with the ability to resume interrupted runs and redo specific pages
@@ -86,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/? | Not started | - |
+| 1. Foundation | 0/4 | Planning complete | - |
 | 2. Image Generation | 0/? | Not started | - |
 | 3. Build & PDF | 0/? | Not started | - |
 | 4. Publish & Calendar | 0/? | Not started | - |

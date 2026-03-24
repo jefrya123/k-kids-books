@@ -12,7 +12,7 @@ BookForge is built in four phases that follow the natural dependency order of th
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - CLI scaffold, story markdown format, style guide loader, and project state management
+- [x] **Phase 1: Foundation** - CLI scaffold, story markdown format, style guide loader, and project state management (completed 2026-03-24)
 - [ ] **Phase 2: Image Generation** - Flux Kontext illustration pipeline with resume, retry, and character reference conditioning
 - [ ] **Phase 3: Build & PDF** - HTML assembly and all six PDF variants (3 editions x screen/print) with KDP compliance
 - [ ] **Phase 4: Publish & Calendar** - Review gate, publish package generation, listing copy, and content calendar
@@ -89,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 3/4 | In Progress|  |
+| 1. Foundation | 3/4 | Complete    | 2026-03-24 |
 | 2. Image Generation | 0/? | Not started | - |
 | 3. Build & PDF | 0/? | Not started | - |
 | 4. Publish & Calendar | 0/? | Not started | - |

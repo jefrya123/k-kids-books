@@ -79,10 +79,12 @@ Plans:
   3. The publish package includes Gumroad and KDP listing copy (title, description, price) ready to copy-paste, with correct KDP cover dimensions and spine width calculated from page count
   4. The publish package includes an UPLOAD-CHECKLIST.md with a step-by-step upload guide and an explicit AI content disclosure reminder
   5. User can run `uv run bookforge calendar` and see upcoming release deadlines with holiday names, holiday dates, release target dates, and marketing start dates in a Rich table
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: TBD
+- [ ] 04-01-PLAN.md — Review command with summary, checklist, and approval stamping
+- [ ] 04-02-PLAN.md — Calendar command with YAML loader and Rich table display
+- [ ] 04-03-PLAN.md — Publish command with cover images, listing copy, and upload checklist
 
 ## Progress
 
@@ -94,4 +96,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 4/4 | Complete    | 2026-03-24 |
 | 2. Image Generation | 2/2 | Complete    | 2026-03-24 |
 | 3. Build & PDF | 0/2 | Complete    | 2026-03-24 |
-| 4. Publish & Calendar | 0/? | Not started | - |
+| 4. Publish & Calendar | 0/3 | Not started | - |

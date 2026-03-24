@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-04-PLAN.md
-last_updated: "2026-03-24T20:18:02.221Z"
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-03-24T20:36:01.369Z"
 last_activity: 2026-03-24 — Completed 01-03 style guide loader
 progress:
   total_phases: 4
   completed_phases: 1
-  total_plans: 4
-  completed_plans: 4
+  total_plans: 6
+  completed_plans: 5
   percent: 75
 ---
 
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Consistent, high-quality children's book illustrations from a single markdown file — books that look hand-illustrated, not AI-generated, with characters recognizably the same across all pages.
-**Current focus:** Phase 1 — Foundation
+**Current focus:** Phase 2 — Image Generation
 
 ## Current Position
 
-Phase: 1 of 4 (Foundation)
-Plan: 3 of 4 in current phase
+Phase: 2 of 4 (Image Generation)
+Plan: 1 of 2 in current phase
 Status: Executing
-Last activity: 2026-03-24 — Completed 01-03 style guide loader
+Last activity: 2026-03-24 — Completed 02-01 ImageProvider ABC and Flux Kontext
 
-Progress: [████████░░] 75%
+Progress: [████████░░] 83%
 
 ## Performance Metrics
 
@@ -51,6 +51,7 @@ Progress: [████████░░] 75%
 
 *Updated after each plan completion*
 | Phase 01 P04 | 2min | 2 tasks | 5 files |
+| Phase 02 P01 | 2min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -68,6 +69,9 @@ Recent decisions affecting current work:
 - [Phase 01-02]: Targeted comment extraction in parser -- only strips ko/image/image-override, preserves other HTML comments
 - [Phase 01-02]: Soft validator pattern -- returns warning strings, not exceptions
 - [Phase 01-04]: CLI command pattern: separate module per command, registered via app.command() in __init__.py
+- [Phase 02]: output_path added to ImageRequest dataclass for provider to write bytes directly
+- [Phase 02]: Aspect ratio derived from width/height via GCD reduction with fallback to 1:1
+- [Phase 02]: Provider ABC pattern: ImageProvider with abstract generate() and provider_name
 
 ### Pending Todos
 
@@ -80,6 +84,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T20:14:28.228Z
-Stopped at: Completed 01-04-PLAN.md
+Last session: 2026-03-24T20:36:01.366Z
+Stopped at: Completed 02-01-PLAN.md
 Resume file: None

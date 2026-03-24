@@ -1,0 +1,29 @@
+[project]
+name = "bookforge"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.24.1",
+    "rich>=14.3.3",
+    "anthropic>=0.86.0",
+    "python-frontmatter>=1.1.0",
+    "ruamel.yaml>=0.19.1",
+    "pydantic>=2.12.5",
+]
+
+[project.scripts]
+bookforge = "bookforge.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "respx",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

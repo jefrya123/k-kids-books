@@ -91,6 +91,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete    | 2026-03-24 |
-| 2. Image Generation | 2/2 | Complete   | 2026-03-24 |
+| 2. Image Generation | 2/2 | Complete    | 2026-03-24 |
 | 3. Build & PDF | 0/? | Not started | - |
 | 4. Publish & Calendar | 0/? | Not started | - |

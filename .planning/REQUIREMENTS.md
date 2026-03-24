@@ -11,7 +11,7 @@
 - [x] **CLI-02**: User can run `uv run bookforge illustrate <slug>` to generate images for all pages
 - [x] **CLI-03**: User can run `uv run bookforge build <slug>` to assemble HTML and export PDFs
 - [x] **CLI-04**: User can run `uv run bookforge review <slug>` to run pre-publish review checklist
-- [ ] **CLI-05**: User can run `uv run bookforge publish <slug>` to generate publish package
+- [x] **CLI-05**: User can run `uv run bookforge publish <slug>` to generate publish package
 - [x] **CLI-06**: User can run `uv run bookforge calendar` to view upcoming release deadlines
 
 ### Story & Content
@@ -59,12 +59,12 @@
 - [x] **REV-01**: Review command shows summary (page count, image count, word count EN/KR, file sizes)
 - [x] **REV-02**: Review prints checklist (story quality, Korean proofread, image consistency, cover strength)
 - [x] **REV-03**: Review requires explicit `y/n` approval, stamps approval into book state
-- [ ] **PUB-01**: Publish only runs if review approved
-- [ ] **PUB-02**: Generates `publish-package/` with all PDFs, cover images (Gumroad thumb, KDP cover, 1080x1080 social)
-- [ ] **PUB-03**: Auto-generates listing copy (title, description, price) for copy-paste into Gumroad/KDP
-- [ ] **PUB-04**: KDP cover dimensions computed from trim size + spine width (based on page count + paper type)
-- [ ] **PUB-05**: Step-by-step upload checklist including AI content disclosure reminder
-- [ ] **PUB-06**: Spine width calculated at publish time from current page count
+- [x] **PUB-01**: Publish only runs if review approved
+- [x] **PUB-02**: Generates `publish-package/` with all PDFs, cover images (Gumroad thumb, KDP cover, 1080x1080 social)
+- [x] **PUB-03**: Auto-generates listing copy (title, description, price) for copy-paste into Gumroad/KDP
+- [x] **PUB-04**: KDP cover dimensions computed from trim size + spine width (based on page count + paper type)
+- [x] **PUB-05**: Step-by-step upload checklist including AI content disclosure reminder
+- [x] **PUB-06**: Spine width calculated at publish time from current page count
 
 ### Content Calendar
 
@@ -111,7 +111,7 @@
 | CLI-02 | Phase 2 | Complete |
 | CLI-03 | Phase 3 | Complete |
 | CLI-04 | Phase 4 | Complete |
-| CLI-05 | Phase 4 | Pending |
+| CLI-05 | Phase 4 | Complete |
 | CLI-06 | Phase 4 | Complete |
 | STOR-01 | Phase 1 | Complete |
 | STOR-02 | Phase 1 | Complete |
@@ -144,12 +144,12 @@
 | REV-01 | Phase 4 | Complete |
 | REV-02 | Phase 4 | Complete |
 | REV-03 | Phase 4 | Complete |
-| PUB-01 | Phase 4 | Pending |
-| PUB-02 | Phase 4 | Pending |
-| PUB-03 | Phase 4 | Pending |
-| PUB-04 | Phase 4 | Pending |
-| PUB-05 | Phase 4 | Pending |
-| PUB-06 | Phase 4 | Pending |
+| PUB-01 | Phase 4 | Complete |
+| PUB-02 | Phase 4 | Complete |
+| PUB-03 | Phase 4 | Complete |
+| PUB-04 | Phase 4 | Complete |
+| PUB-05 | Phase 4 | Complete |
+| PUB-06 | Phase 4 | Complete |
 | CAL-01 | Phase 4 | Complete |
 | CAL-02 | Phase 4 | Complete |
 | CAL-03 | Phase 4 | Complete |

@@ -6,6 +6,7 @@ from bookforge.cli.build import build_command
 from bookforge.cli.calendar import calendar_command
 from bookforge.cli.illustrate import illustrate_command
 from bookforge.cli.new import new_command
+from bookforge.cli.publish import publish_command
 from bookforge.cli.review import review_command
 
 app = typer.Typer(
@@ -19,6 +20,7 @@ app.command("illustrate")(illustrate_command)
 app.command("build")(build_command)
 app.command("review")(review_command)
 app.command("calendar")(calendar_command)
+app.command("publish")(publish_command)
 
 
 @app.callback(invoke_without_command=True)

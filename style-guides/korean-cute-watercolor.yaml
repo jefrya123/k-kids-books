@@ -1,0 +1,38 @@
+# BookForge Style Guide — Korean Cute Watercolor
+# Used by: bookforge illustrate, bookforge build
+name: korean-cute-watercolor
+version: 1
+
+art_style:
+  prompt_prefix: "Children's book illustration, soft watercolor style, warm pastel colors, gentle brushstrokes, hand-illustrated look, picture book quality"
+  negative_prompt: "photorealistic, 3D render, dark, scary, violent, text, watermark, signature, low quality"
+  color_palette:
+    - "#F4E4C1"   # warm cream
+    - "#A8D8EA"   # soft sky blue
+    - "#FFB7B2"   # gentle coral
+    - "#B5EAD7"   # mint green
+    - "#E2C2F0"   # light lavender
+    - "#FFDAC1"   # peach
+
+image:
+  provider: flux_kontext_pro
+  width: 1024
+  height: 1024
+
+characters:
+  ho-rang:
+    name_en: Ho-rang
+    name_ko: 호랑
+    description: "A small, friendly tiger cub with round orange fur, dark stripes, big curious eyes, and a perpetually wagging tail. Wears a tiny red scarf."
+    reference_image: characters/horang-ref.png
+  gom-i:
+    name_en: Gom-i
+    name_ko: 곰이
+    description: "A chubby, gentle bear cub with soft brown fur, round ears, warm brown eyes, and a shy smile. Wears a small blue bow on one ear."
+    reference_image: characters/gomi-ref.png
+
+layout:
+  trim_inches: [8.5, 8.5]
+  bleed_inches: 0.125
+  safe_margin_inches: 0.25
+  dpi: 300

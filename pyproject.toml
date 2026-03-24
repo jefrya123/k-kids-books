@@ -9,6 +9,12 @@ dependencies = [
     "python-frontmatter>=1.1.0",
     "ruamel.yaml>=0.19.1",
     "pydantic>=2.12.5",
+    "replicate>=1.0.7",
+    "pillow>=12.1.1",
+    "httpx>=0.28.1",
+    "jinja2>=3.1.6",
+    "weasyprint>=68.1",
+    "pikepdf>=10.5.1",
 ]
 
 [project.scripts]

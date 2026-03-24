@@ -1,0 +1,26 @@
+/* Print format — with bleed zone for KDP compliance */
+
+@page {
+    size: {{ page_w }}in {{ page_h }}in;
+    margin: 0;
+    bleed: {{ bleed }}in;
+    marks: none;
+}
+
+.page {
+    width: {{ page_w }}in;
+    height: {{ page_h }}in;
+}
+
+/* Illustration extends into bleed zone via negative positioning */
+.illustration {
+    width: calc({{ page_w }}in + {{ bleed }}in * 2);
+    height: calc({{ page_h }}in + {{ bleed }}in * 2);
+    top: -{{ bleed }}in;
+    left: -{{ bleed }}in;
+}
+
+/* Text safe zone offset accounts for bleed + safe margin */
+.text-safe-zone {
+    padding: {{ safe_margin + bleed }}in;
+}

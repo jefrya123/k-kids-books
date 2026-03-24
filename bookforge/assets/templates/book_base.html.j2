@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{% if edition == 'ko' %}ko{% elif edition == 'en' %}en{% else %}en{% endif %}">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <style>
+    {% include 'css/base.css' %}
+    </style>
+    <style>
+    {% if fmt == 'print' %}
+    {% include 'css/print.css' %}
+    {% else %}
+    {% include 'css/screen.css' %}
+    {% endif %}
+    </style>
+</head>
+<body>
+{% include 'book_page.html.j2' %}
+</body>
+</html>

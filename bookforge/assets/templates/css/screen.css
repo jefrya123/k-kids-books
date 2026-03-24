@@ -1,0 +1,16 @@
+/* Screen format — trim size only */
+
+@page {
+    size: {{ trim_w }}in {{ trim_h }}in;
+    margin: 0;
+}
+
+.page {
+    width: {{ trim_w }}in;
+    height: {{ trim_h }}in;
+}
+
+.illustration {
+    width: {{ trim_w }}in;
+    height: {{ trim_h }}in;
+}

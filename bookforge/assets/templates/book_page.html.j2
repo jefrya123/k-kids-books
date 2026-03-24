@@ -1,0 +1,16 @@
+{# Per-page template: renders pages with edition-aware text filtering #}
+{% for page in pages %}
+<div class="page">
+    <img class="illustration"
+         src="{{ image_dir }}/page-{{ '%02d' % page.number }}.png"
+         alt="Page {{ page.number }} illustration" />
+    <div class="text-safe-zone">
+        {% if edition != 'ko' %}
+        <p class="text-en">{{ page.text.en }}</p>
+        {% endif %}
+        {% if edition != 'en' %}
+        <p class="text-ko">{{ page.text.ko }}</p>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}

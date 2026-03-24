@@ -1,0 +1,53 @@
+/* Base typography and layout for bookforge book rendering */
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('{{ font_path }}') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Shared text styles — same size/weight/line-height for both languages */
+.text-en, .text-ko {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2c2c2c;
+}
+
+.text-en {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.text-ko {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* Page layout */
+.page {
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+}
+
+.page:last-child {
+    page-break-after: auto;
+}
+
+/* Full-bleed illustration as positioned <img> */
+.illustration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* Text overlay zone — bottom-anchored with semi-transparent background */
+.text-safe-zone {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: {{ safe_margin }}in;
+    background: rgba(255, 255, 255, 0.85);
+}

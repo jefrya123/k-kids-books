@@ -27,8 +27,8 @@
 
 - [x] **STYL-01**: Style guide YAML defines art style name, prompt prefix, color palette, negative prompt
 - [x] **STYL-02**: Character definitions in style guide with visual description and reference image paths
-- [ ] **STYL-03**: Ho-rang (tiger) and Gom-i (bear) character sheets generated upfront as reference images
-- [ ] **STYL-04**: Every image generation call prepends style prefix + character descriptions + negative prompt
+- [x] **STYL-03**: Ho-rang (tiger) and Gom-i (bear) character sheets generated upfront as reference images
+- [x] **STYL-04**: Every image generation call prepends style prefix + character descriptions + negative prompt
 - [x] **STYL-05**: Image provider configured in style guide YAML (provider-agnostic layer)
 
 ### Image Generation
@@ -121,8 +121,8 @@
 | STOR-06 | Phase 1 | Complete |
 | STYL-01 | Phase 1 | Complete |
 | STYL-02 | Phase 1 | Complete |
-| STYL-03 | Phase 1 | Pending |
-| STYL-04 | Phase 1 | Pending |
+| STYL-03 | Phase 1 | Complete |
+| STYL-04 | Phase 1 | Complete |
 | STYL-05 | Phase 1 | Complete |
 | IMG-01 | Phase 2 | Pending |
 | IMG-02 | Phase 2 | Pending |

@@ -34,7 +34,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [ ] 01-01-PLAN.md — Project scaffold, Pydantic schemas, test fixtures
 - [ ] 01-02-PLAN.md — Story parser and validator
-- [ ] 01-03-PLAN.md — Style guide loader and default style guide YAML
+- [x] 01-03-PLAN.md — Style guide loader and default style guide YAML
 - [ ] 01-04-PLAN.md — CLI new command and Claude story generator
 
 ### Phase 2: Image Generation

@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-03-PLAN.md
-last_updated: "2026-03-24T20:08:25Z"
+stopped_at: Completed 01-04-PLAN.md
+last_updated: "2026-03-24T20:14:28.233Z"
 last_activity: 2026-03-24 — Completed 01-03 style guide loader
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 4
-  completed_plans: 2
-  percent: 50
+  completed_plans: 4
+  percent: 75
 ---
 
 # Project State
@@ -50,6 +50,7 @@ Progress: [████████░░] 75%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01 P04 | 2min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -66,6 +67,7 @@ Recent decisions affecting current work:
 - [Phase 01-03]: JSON round-trip to convert ruamel CommentedMap to plain dict for Pydantic validation
 - [Phase 01-02]: Targeted comment extraction in parser -- only strips ko/image/image-override, preserves other HTML comments
 - [Phase 01-02]: Soft validator pattern -- returns warning strings, not exceptions
+- [Phase 01-04]: CLI command pattern: separate module per command, registered via app.command() in __init__.py
 
 ### Pending Todos
 
@@ -78,6 +80,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24
-Stopped at: Completed 01-02-PLAN.md
+Last session: 2026-03-24T20:14:28.228Z
+Stopped at: Completed 01-04-PLAN.md
 Resume file: None

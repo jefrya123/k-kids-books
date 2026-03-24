@@ -7,7 +7,7 @@
 
 ### CLI Foundation
 
-- [ ] **CLI-01**: User can run `uv run bookforge new <slug>` to scaffold a new book directory with story.md template
+- [x] **CLI-01**: User can run `uv run bookforge new <slug>` to scaffold a new book directory with story.md template
 - [ ] **CLI-02**: User can run `uv run bookforge illustrate <slug>` to generate images for all pages
 - [ ] **CLI-03**: User can run `uv run bookforge build <slug>` to assemble HTML and export PDFs
 - [ ] **CLI-04**: User can run `uv run bookforge review <slug>` to run pre-publish review checklist
@@ -20,7 +20,7 @@
 - [x] **STOR-02**: Page boundaries defined by `## Page N` headers in story.md
 - [x] **STOR-03**: English text is bare, Korean text wrapped in `<!-- ko -->` / `<!-- /ko -->` blocks
 - [x] **STOR-04**: Image prompts embedded as `<!-- image: ... -->` comments per page
-- [ ] **STOR-05**: Claude API generates bilingual draft story from a one-line prompt via `new` command
+- [x] **STOR-05**: Claude API generates bilingual draft story from a one-line prompt via `new` command
 - [x] **STOR-06**: Image prompt overrides saved as `<!-- image-override: ... -->` when using `--redo --prompt`
 
 ### Style & Consistency
@@ -107,7 +107,7 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CLI-01 | Phase 1 | Pending |
+| CLI-01 | Phase 1 | Complete |
 | CLI-02 | Phase 2 | Pending |
 | CLI-03 | Phase 3 | Pending |
 | CLI-04 | Phase 4 | Pending |
@@ -117,7 +117,7 @@
 | STOR-02 | Phase 1 | Complete |
 | STOR-03 | Phase 1 | Complete |
 | STOR-04 | Phase 1 | Complete |
-| STOR-05 | Phase 1 | Pending |
+| STOR-05 | Phase 1 | Complete |
 | STOR-06 | Phase 1 | Complete |
 | STYL-01 | Phase 1 | Complete |
 | STYL-02 | Phase 1 | Complete |

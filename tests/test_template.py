@@ -203,7 +203,9 @@ class TestRenderBookHtml:
         from bookforge.build.renderer import render_book_html
 
         html = render_book_html(sample_book, "en", sample_style_guide, "screen", tmp_path)
-        assert "bleed" not in html
+        # Check CSS does not contain bleed property (ignore image paths that may contain "bleed")
+        assert "bleed:" not in html
+        assert "bleed :" not in html
 
     def test_dimensions_from_trim_size(self, sample_book, sample_style_guide, tmp_path):
         from bookforge.build.renderer import render_book_html

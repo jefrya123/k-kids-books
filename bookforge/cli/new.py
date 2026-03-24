@@ -1,4 +1,4 @@
-"""bookforge new <slug> -- scaffold a new book and generate story draft."""
+"""bookforge new <slug> -- scaffold a new book directory with story template."""
 
 from pathlib import Path
 
@@ -6,18 +6,98 @@ import typer
 from rich.console import Console
 
 from bookforge.state import save_state
-from bookforge.story.generator import generate_story
 
 console = Console()
+
+STORY_TEMPLATE = """---
+title: "{title}"
+title_ko: ""
+subtitle: ""
+slug: {slug}
+trim_size: "8.5x8.5"
+price: 4.99
+ages: "4-8"
+---
+
+## Page 1 — Title Page
+
+<!-- image: Ho-rang and Gom-i standing together in front of a beautiful scene. Warm golden light. Cute Korean watercolor style. -->
+
+## Page 2-3
+
+<!-- ko -->
+<!-- /ko -->
+
+<!-- image: -->
+
+## Page 4-5
+
+<!-- ko -->
+<!-- /ko -->
+
+<!-- image: -->
+
+## Page 6-7
+
+<!-- ko -->
+<!-- /ko -->
+
+<!-- image: -->
+
+## Page 8-9
+
+<!-- ko -->
+<!-- /ko -->
+
+<!-- image: -->
+
+## Page 10-11
+
+<!-- ko -->
+<!-- /ko -->
+
+<!-- image: -->
+
+## Page 12-13
+
+<!-- ko -->
+<!-- /ko -->
+
+<!-- image: -->
+
+## Page 14-15
+
+<!-- ko -->
+<!-- /ko -->
+
+<!-- image: -->
+
+## Page 16-17
+
+<!-- ko -->
+<!-- /ko -->
+
+<!-- image: -->
+
+## Page 18-19
+
+<!-- ko -->
+<!-- /ko -->
+
+<!-- image: -->
+
+## Page 20 — Back Page
+
+<!-- image: Ho-rang and Gom-i waving goodbye. Soft watercolor background. -->
+"""
 
 
 def new_command(
     slug: str = typer.Argument(..., help="Book slug, e.g. 'dangun-story'"),
-    prompt: str = typer.Option(..., "--prompt", "-p", help="One-line book idea for Claude"),
+    title: str = typer.Option("", "--title", "-t", help="Book title (optional, can edit later)"),
     style_guide: str = typer.Option("korean-cute-watercolor", "--style", "-s", help="Style guide name"),
-    pages: int = typer.Option(12, "--pages", help="Number of pages to generate"),
 ) -> None:
-    """Create a new book directory and generate a bilingual story draft."""
+    """Create a new book directory with a story.md template to fill in."""
     book_dir = Path("books") / slug
 
     if book_dir.exists():
@@ -28,9 +108,8 @@ def new_command(
     for subdir in ["images", "dist", "publish"]:
         (book_dir / subdir).mkdir(parents=True)
 
-    # Generate story via Claude
-    console.print(f"[cyan]Generating story for:[/cyan] {prompt}")
-    story_content = generate_story(prompt, style_guide_name=style_guide, page_count=pages)
+    # Write story template
+    story_content = STORY_TEMPLATE.format(title=title or slug.replace("-", " ").title(), slug=slug)
     (book_dir / "story.md").write_text(story_content)
 
     # Write initial state
@@ -39,7 +118,7 @@ def new_command(
         "slug": slug,
         "style_guide": style_guide,
         "stages": {
-            "story": "complete",
+            "story": "pending",
             "illustrate": "pending",
             "build_en": "pending",
             "build_ko": "pending",
@@ -50,11 +129,13 @@ def new_command(
     })
 
     console.print(f"\n[green]Book scaffolded:[/green] {book_dir}/")
-    console.print("  story.md      - Generated bilingual draft")
+    console.print("  story.md      - Template ready to fill in")
     console.print("  state.json    - Pipeline state tracker")
     console.print("  images/       - Generated illustrations (empty)")
     console.print("  dist/         - Built PDFs (empty)")
     console.print("  publish/      - Final publish-ready files (empty)")
     console.print(f"\n[bold]Next steps:[/bold]")
-    console.print(f"  1. Review and edit books/{slug}/story.md")
-    console.print(f"  2. Run: uv run bookforge illustrate {slug}")
+    console.print(f"  1. Write your story in books/{slug}/story.md")
+    console.print(f"     (or ask Claude to write it for you!)")
+    console.print(f"  2. Have your wife proofread the Korean")
+    console.print(f"  3. Run: uv run bookforge illustrate {slug}")

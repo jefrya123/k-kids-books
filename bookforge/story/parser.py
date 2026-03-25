@@ -21,7 +21,7 @@ _IMAGE_RE = re.compile(r"<!--\s*image:\s*(.*?)\s*-->", re.DOTALL)
 _IMAGE_OVERRIDE_RE = re.compile(r"<!--\s*image-override:\s*(.*?)\s*-->", re.DOTALL)
 
 # Page header splitter
-_PAGE_HEADER_RE = re.compile(r"^## Page \d+\s*$", re.MULTILINE)
+_PAGE_HEADER_RE = re.compile(r"^## Page [\d\-]+.*$", re.MULTILINE)
 
 
 def parse_story(path: str | Path) -> Book:

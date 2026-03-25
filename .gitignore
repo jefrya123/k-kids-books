@@ -8,3 +8,4 @@ books/*/dist/
 books/*/publish/
 .venv/
 uv.lock
+.playwright-mcp/

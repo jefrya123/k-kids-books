@@ -12,15 +12,14 @@
     height: {{ page_h }}in;
 }
 
-/* Illustration extends into bleed zone via negative positioning */
+/* Illustration extends slightly into bleed on sides */
 .illustration {
-    width: calc({{ page_w }}in + {{ bleed }}in * 2);
-    height: calc({{ page_h }}in + {{ bleed }}in * 2);
-    top: -{{ bleed }}in;
-    left: -{{ bleed }}in;
+    width: {{ page_w }}in;
+    height: 65%;
+    object-fit: cover;
 }
 
-/* Text safe zone offset accounts for bleed + safe margin */
+/* Text safe zone with extra margin for print */
 .text-safe-zone {
-    padding: {{ safe_margin + bleed }}in;
+    padding: 0.35in 0.5in;
 }

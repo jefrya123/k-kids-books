@@ -1,4 +1,4 @@
-/* Screen format — trim size only */
+/* Screen format — trim size only, no bleed */
 
 @page {
     size: {{ trim_w }}in {{ trim_h }}in;
@@ -6,11 +6,6 @@
 }
 
 .page {
-    width: {{ trim_w }}in;
-    height: {{ trim_h }}in;
-}
-
-.illustration {
     width: {{ trim_w }}in;
     height: {{ trim_h }}in;
 }

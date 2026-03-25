@@ -32,9 +32,10 @@ def build_command(
 
     # Load book and style guide
     book = parse_story(book_dir / "story.md")
-    style_guide_path = (
-        book_dir.parent / "style-guides" / f"{book.meta.style_guide}.yaml"
-    )
+    # Look for style guide in project root first, then relative to books/
+    style_guide_path = Path("style-guides") / f"{book.meta.style_guide}.yaml"
+    if not style_guide_path.exists():
+        style_guide_path = book_dir.parent / "style-guides" / f"{book.meta.style_guide}.yaml"
     style_guide = load_style_guide(style_guide_path)
 
     # Determine editions and formats

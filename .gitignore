@@ -9,3 +9,12 @@ books/*/publish/
 .venv/
 uv.lock
 .playwright-mcp/
+# Old Flux test images (keeping locally, not in repo)
+books/dangun/images/*-v1.png
+books/dangun/images/*-v2.png
+books/dangun/images/page-02-v3.png
+books/dangun/images/page-02-v3b.png
+books/dangun/images/page-02-v3c.png
+books/dangun/images/page-06-v3.png
+books/dangun/images/page-06-v3b.png
+books/dangun/output/

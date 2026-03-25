@@ -6,6 +6,7 @@ slug: dangun
 trim_size: "8.5x8.5"
 price: 4.99
 ages: "4-8"
+style_guide: korean-cute-watercolor
 ---
 
 ## Page 1 — Title Page

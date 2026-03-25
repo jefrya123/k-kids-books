@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout G — Alive</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Quicksand:wght@400;500;600;700&family=Sunflower:wght@300;500;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #2a2a2a;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  h3 {
+    color: #888;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: -20px;
+  }
+
+  .spread {
+    display: flex;
+    max-width: 950px;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  }
+  .page-img {
+    width: 50%;
+    min-height: 520px;
+  }
+  .page-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .page-txt {
+    width: 50%;
+    padding: 40px 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ===== SPREAD 1: TITLE — bold, celebratory ===== */
+  .s-title .page-txt {
+    background: #fdf1dc;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .s-title .page-txt::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(252,182,159,0.3) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .s-title .page-txt::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: -30px;
+    width: 160px; height: 160px;
+    background: radial-gradient(circle, rgba(201,160,220,0.25) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .s-title .title-en {
+    font-family: 'Nunito', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #c9a0dc;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .s-title .title-ko {
+    font-family: 'Gaegu', cursive;
+    font-size: 32px;
+    font-weight: 700;
+    color: #e8a87c;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .s-title .subtitle {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: #b0a090;
+    font-style: italic;
+    position: relative;
+  }
+  .s-title .series {
+    margin-top: 30px;
+    font-family: 'Gaegu', cursive;
+    font-size: 16px;
+    color: #c9a0dc;
+    opacity: 0.7;
+    position: relative;
+  }
+
+  /* ===== SPREAD: HEAVEN — warm, golden ===== */
+  .s-heaven .page-txt {
+    background: #fef6e4;
+  }
+  .s-heaven .page-txt::before {
+    content: '☁️';
+    position: absolute;
+    top: 20px; right: 20px;
+    font-size: 40px;
+    opacity: 0.15;
+  }
+  .s-heaven .page-txt::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #fcd5a0, #c9a0dc, #fcd5a0);
+  }
+
+  /* ===== SPREAD: MOUNTAIN — fresh green ===== */
+  .s-mountain .page-txt {
+    background: #f2f7ed;
+  }
+  .s-mountain .page-txt::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #a0c890, #70a060, #a0c890);
+  }
+  .s-mountain .page-txt::after {
+    content: '🌿';
+    position: absolute;
+    bottom: 20px; right: 24px;
+    font-size: 36px;
+    opacity: 0.15;
+  }
+
+  /* ===== SPREAD: WARM — friendship peach ===== */
+  .s-warm .page-txt {
+    background: #fef0e6;
+  }
+  .s-warm .page-txt::before {
+    content: '🐾';
+    position: absolute;
+    bottom: 20px; left: 24px;
+    font-size: 50px;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+  }
+  .s-warm .page-txt::after {
+    content: '🐾';
+    position: absolute;
+    top: 30px; right: 30px;
+    font-size: 30px;
+    opacity: 0.08;
+    transform: rotate(25deg);
+  }
+
+  /* ===== SPREAD: CAVE — moody purple ===== */
+  .s-cave .page-txt {
+    background: #e8e0f0;
+  }
+  .s-cave .page-txt::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(100,70,140,0.06) 0%, transparent 60%);
+  }
+  .s-cave .page-txt::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #b090d0, #8060a0, #b090d0);
+  }
+
+  /* ===== SPREAD: BREAKTHROUGH — radiant ===== */
+  .s-break .page-txt {
+    background: linear-gradient(180deg, #fef8e8 0%, #fef0e0 40%, #f8e6f0 100%);
+  }
+  .s-break .page-txt::before {
+    content: '';
+    position: absolute;
+    top: 40%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(255,220,150,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  /* ===== SPREAD: SUNSET — warm ending ===== */
+  .s-sunset .page-txt {
+    background: linear-gradient(180deg, #fef2e4 0%, #fce8d8 50%, #f6e0e0 100%);
+  }
+  .s-sunset .page-txt::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #e8a87c, #c9a0dc, #e8a87c);
+  }
+
+  /* ===== TEXT STYLES — bilingual, equal weight ===== */
+  .txt-block {
+    position: relative;
+    z-index: 1;
+  }
+  .en {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 19px;
+    line-height: 2;
+    color: #3a2a1a;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .divider-line {
+    width: 50px;
+    height: 2px;
+    margin: 0 auto 18px;
+    border-radius: 1px;
+  }
+  .s-heaven .divider-line { background: #e8c87c; }
+  .s-mountain .divider-line { background: #90b880; }
+  .s-warm .divider-line { background: #e8a87c; }
+  .s-cave .divider-line { background: #a080c0; }
+  .s-break .divider-line { background: #daa860; }
+  .s-sunset .divider-line { background: #d89878; }
+  .s-title .divider-line { background: #c9a0dc; }
+
+  .ko {
+    font-family: 'Gaegu', cursive;
+    font-size: 22px;
+    line-height: 1.9;
+    color: #5a4a3a;
+    font-weight: 700;
+  }
+  .page-num {
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+    color: rgba(0,0,0,0.2);
+    text-align: center;
+    margin-top: auto;
+    padding-top: 16px;
+    position: relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<!-- TITLE -->
+<h3>Title Spread</h3>
+<div class="spread s-title">
+  <div class="page-img"><img src="images/page-01-v3.png" alt="Title"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="title-en">The Story of Dangun</div>
+      <div class="title-ko">단군 이야기</div>
+      <div class="divider-line"></div>
+      <div class="subtitle">How Korea Began</div>
+      <div class="series">호랑 & 곰이의 한국 모험</div>
+    </div>
+  </div>
+</div>
+
+<!-- SPREAD 2: Prince -->
+<h3>Pages 2-3</h3>
+<div class="spread s-heaven">
+  <div class="page-img"><img src="images/page-02-v3d.png" alt="Prince"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="en" style="text-align:center;">
+        Way up above the clouds,<br>
+        higher than the highest mountain,<br>
+        there lived a prince named Hwanung.<br><br>
+        Every morning, Hwanung walked to<br>
+        the edge of heaven and looked down.
+      </div>
+      <div class="divider-line"></div>
+      <div class="ko" style="text-align:center;">
+        구름보다 높은 곳, 가장 높은 산보다도 높은 곳에<br>
+        환웅이라는 왕자가 살고 있었어요.<br><br>
+        매일 아침, 환웅은 하늘 끝에 서서<br>
+        아래를 내려다보았어요.
+      </div>
+    </div>
+    <div class="page-num">2 — 3</div>
+  </div>
+</div>
+
+<!-- SPREAD 3: What he saw -->
+<h3>Pages 4-5</h3>
+<div class="spread s-mountain">
+  <div class="page-img"><img src="images/page-04-v3.png" alt="Landscape"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="en" style="text-align:center;">
+        He saw rivers that twisted<br>
+        like silver ribbons.<br><br>
+        He saw mountains with trees so green<br>
+        they looked like they were breathing.<br><br>
+        "I want to help them,"<br>
+        Hwanung whispered.
+      </div>
+      <div class="divider-line"></div>
+      <div class="ko" style="text-align:center;">
+        은빛 리본처럼 구불구불한 강이 보였어요.<br>
+        숨을 쉬는 것처럼 푸른 나무가 가득한 산이 보였어요.<br><br>
+        "저 사람들을 돕고 싶어요,"<br>
+        환웅이 속삭였어요.
+      </div>
+    </div>
+    <div class="page-num">4 — 5</div>
+  </div>
+</div>
+
+<!-- SPREAD 4: Three thousand -->
+<h3>Pages 6-7</h3>
+<div class="spread s-heaven">
+  <div class="page-img"><img src="images/page-06-v3c.png" alt="Flying down"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="en" style="text-align:center;">
+        His father, the great King of Heaven, smiled.<br>
+        "Then go," he said.<br><br>
+        And he gave Hwanung three magical gifts:<br>
+        the power of wind,<br>
+        the power of rain,<br>
+        and the power of clouds.<br><br>
+        Hwanung flew down to the tallest mountain —<br>
+        a mountain called Baekdu.
+      </div>
+      <div class="divider-line"></div>
+      <div class="ko" style="text-align:center;">
+        "그럼 가거라," 왕이 말했어요.<br><br>
+        바람의 힘, 비의 힘, 그리고 구름의 힘.<br><br>
+        환웅은 백두산으로 날아갔어요.
+      </div>
+    </div>
+    <div class="page-num">6 — 7</div>
+  </div>
+</div>
+
+<!-- SPREAD 5: Two friends -->
+<h3>Pages 8-9</h3>
+<div class="spread s-warm">
+  <div class="page-img"><img src="images/page-08-v2.png" alt="Ho-rang and Gom-i"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="en" style="text-align:center;">
+        Now, on that mountain<br>
+        lived two friends.<br><br>
+        A tiger named <strong>Ho-rang</strong>,<br>
+        who was loud and fast<br>
+        and never, ever sat still.<br><br>
+        And a bear named <strong>Gom-i</strong>,<br>
+        who was quiet and warm<br>
+        and could wait for anything.
+      </div>
+      <div class="divider-line"></div>
+      <div class="ko" style="text-align:center;">
+        그 산에는 두 친구가 살고 있었어요.<br><br>
+        시끄럽고 빠른 호랑이, <strong>호랑</strong>.<br><br>
+        조용하고 따뜻한 곰, <strong>곰이</strong>.
+      </div>
+    </div>
+    <div class="page-num">8 — 9</div>
+  </div>
+</div>
+
+<!-- SPREAD 6: The wish -->
+<h3>Pages 10-11</h3>
+<div class="spread s-warm">
+  <div class="page-img"><img src="images/page-10-v2.png" alt="Meeting Hwanung"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="en" style="text-align:center;">
+        "We want to become human," they said.<br><br>
+        "We want to walk in the villages<br>
+        and eat warm rice<br>
+        and sing songs around the fire."<br><br>
+        Hwanung looked at them for a long time.<br><br>
+        "I can help you.<br>
+        But it will be <em>very, very</em> hard."
+      </div>
+      <div class="divider-line"></div>
+      <div class="ko" style="text-align:center;">
+        "우리도 사람이 되고 싶어요."<br><br>
+        "마을을 걷고, 따뜻한 밥을 먹고,<br>
+        모닥불 옆에서 노래를 부르고 싶어요."<br><br>
+        "도와줄 수 있어.<br>
+        하지만 아주, 아주 힘들 거야."
+      </div>
+    </div>
+    <div class="page-num">10 — 11</div>
+  </div>
+</div>
+
+<!-- SPREAD 7: The test -->
+<h3>Pages 12-13</h3>
+<div class="spread s-cave">
+  <div class="page-img"><img src="images/page-12-v2.png" alt="Cave entrance"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="en" style="text-align:center;">
+        "Go into the dark cave," he said.<br>
+        "Eat only this. See no sunlight.<br><br>
+        If you can last one hundred days…<br>
+        you will become human."<br><br>
+        Ho-rang grabbed the garlic. "Easy!"<br><br>
+        Gom-i said nothing.<br>
+        She just walked into the darkness.
+      </div>
+      <div class="divider-line"></div>
+      <div class="ko" style="text-align:center;">
+        "백 일을 견딜 수 있다면…<br>
+        사람이 될 것이다."<br><br>
+        호랑이 마늘을 낚아챘어요. "쉽지!"<br><br>
+        곰이는 아무 말 없이<br>
+        어둠 속으로 걸어갔어요.
+      </div>
+    </div>
+    <div class="page-num">12 — 13</div>
+  </div>
+</div>
+
+<!-- SPREAD 8: Gives up -->
+<h3>Pages 14-15</h3>
+<div class="spread s-cave">
+  <div class="page-img"><img src="images/page-14-v2.png" alt="Tiger leaves"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="en" style="text-align:center;">
+        Day one:<br>
+        "This garlic is <strong>TERRIBLE</strong>."<br><br>
+        Day ten:<br>
+        "I <strong>MISS</strong> the sun."<br><br>
+        Day twenty:<br>
+        "I <strong>CAN'T DO THIS!</strong>"<br>
+        He burst out of the cave<br>
+        into the bright, bright sunlight.<br><br>
+        Gom-i watched him go.<br>
+        <strong>But she stayed.</strong>
+      </div>
+      <div class="divider-line"></div>
+      <div class="ko" style="text-align:center;">
+        첫째 날: "이 마늘 정말 <strong>끔찍해!</strong>"<br><br>
+        열째 날: "햇빛이 <strong>그리워!</strong>"<br><br>
+        스무째 날: "<strong>못 참겠어!</strong>"<br><br>
+        <strong>하지만 곰이는 남았어요.</strong>
+      </div>
+    </div>
+    <div class="page-num">14 — 15</div>
+  </div>
+</div>
+
+<!-- SPREAD 9: One more day -->
+<h3>Pages 16-17</h3>
+<div class="spread s-cave">
+  <div class="page-img"><img src="images/page-16-v2.png" alt="Dreaming"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="en" style="text-align:center;">
+        Day thirty. Day fifty. Day seventy.<br><br>
+        Gom-i sang little songs in the dark.<br>
+        She counted her heartbeats.<br>
+        She thought about warm rice<br>
+        and all the things she wanted so badly.<br><br>
+        Some days were so hard she whispered:<br><br>
+        <em>"Just one more day.<br>
+        Just one more day."</em>
+      </div>
+      <div class="divider-line"></div>
+      <div class="ko" style="text-align:center;">
+        서른째 날. 쉰째 날. 일흔째 날.<br><br>
+        어둠 속에서 작은 노래를 불렀어요.<br>
+        심장 소리를 세었어요.<br><br>
+        <em>"하루만 더. 하루만 더."</em>
+      </div>
+    </div>
+    <div class="page-num">16 — 17</div>
+  </div>
+</div>
+
+<!-- SPREAD 10: Day 100 -->
+<h3>Pages 18-19</h3>
+<div class="spread s-break">
+  <div class="page-img"><img src="images/page-18-v2.png" alt="Transformation"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="en" style="text-align:center;">
+        On the hundredth morning,<br>
+        something happened.<br><br>
+        Gom-i looked down at her paws —<br>
+        but they weren't paws anymore.<br><br>
+        They were <strong>hands</strong>.<br>
+        Small, human hands.<br><br>
+        She laughed. She cried.<br>
+        She spun around and around<br>
+        under the blue, blue sky.<br><br>
+        <strong>She was human.</strong>
+      </div>
+      <div class="divider-line"></div>
+      <div class="ko" style="text-align:center;">
+        백 번째 아침, 무언가 일어났어요.<br><br>
+        더 이상 앞발이 아니었어요.<br>
+        <strong>손</strong>이었어요. 작고 사람의 손.<br><br>
+        <strong>사람이 된 거예요.</strong>
+      </div>
+    </div>
+    <div class="page-num">18 — 19</div>
+  </div>
+</div>
+
+<!-- SPREAD 11: New beginning -->
+<h3>Pages 20-21</h3>
+<div class="spread s-heaven">
+  <div class="page-img"><img src="images/page-20-v2.png" alt="Wedding"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="en" style="text-align:center;">
+        They married under the sacred tree<br>
+        on Baekdu Mountain,<br>
+        and they had a son.<br><br>
+        They named him <strong>Dangun</strong>.<br><br>
+        Dangun grew up to build<br>
+        the very first kingdom of Korea.<br>
+        He called it <em>Joseon</em> —<br>
+        the Land of Morning Calm.<br><br>
+        And it all began with<br>
+        a bear who wouldn't give up.
+      </div>
+      <div class="divider-line"></div>
+      <div class="ko" style="text-align:center;">
+        이름은 <strong>단군</strong>이었어요.<br><br>
+        한국의 첫 번째 나라를 세웠어요.<br>
+        <em>조선</em> — 고요한 아침의 나라.<br><br>
+        포기하지 않은 곰 한 마리에서<br>
+        시작되었어요.
+      </div>
+    </div>
+    <div class="page-num">20 — 21</div>
+  </div>
+</div>
+
+<!-- SPREAD 12: Back page -->
+<h3>Page 22</h3>
+<div class="spread s-sunset">
+  <div class="page-img"><img src="images/page-22-v2.png" alt="Sunset"></div>
+  <div class="page-txt">
+    <div class="txt-block">
+      <div class="en" style="text-align:center;">
+        And that is how Korea began.<br><br>
+        But what about Ho-rang?<br><br>
+        Don't worry —<br>
+        he's still out there,<br>
+        running through the mountains,<br>
+        fast as the wind.<br><br>
+        And every time Gom-i tells this story,<br>
+        he sits right next to her and says:<br><br>
+        <strong>"Tell them about the garlic!<br>
+        Tell them how TERRIBLE it was!"</strong><br><br>
+        <em>The End. 끝.</em>
+      </div>
+      <div class="divider-line"></div>
+      <div class="ko" style="text-align:center;">
+        이렇게 한국이 시작되었어요.<br><br>
+        그런데 호랑은요?<br><br>
+        걱정 마세요 —<br>
+        아직도 바람처럼 산을 달리고 있어요.<br><br>
+        <strong>"마늘 이야기 해줘!<br>
+        얼마나 끔찍했는지!"</strong>
+      </div>
+    </div>
+    <div class="page-num">22</div>
+  </div>
+</div>
+
+</body>
+</html>

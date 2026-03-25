@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout F — Alive Pages</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f0eb;
+    font-family: 'Nunito', sans-serif;
+    color: #3a2a1a;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h2 { margin: 30px 0 10px; font-size: 18px; color: #c9a0dc; }
+  .desc { color: #888; font-size: 13px; margin-bottom: 16px; }
+
+  .book-spread {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+    margin-bottom: 30px;
+    max-width: 900px;
+    height: 450px;
+  }
+  .page-image {
+    width: 50%;
+    height: 100%;
+  }
+  .page-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .page-text {
+    width: 50%;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .en {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 24px;
+    color: #3a2a1a;
+    position: relative;
+    z-index: 1;
+  }
+  .ko {
+    font-family: 'Gaegu', cursive;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 1;
+  }
+  .page-num {
+    font-size: 11px;
+    color: rgba(0,0,0,0.2);
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Decorative elements */
+  .deco {
+    position: absolute;
+    opacity: 0.06;
+    font-size: 120px;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .deco-top-right { top: -10px; right: -10px; }
+  .deco-bottom-left { bottom: -10px; left: -10px; }
+  .deco-small {
+    position: absolute;
+    opacity: 0.12;
+    font-size: 28px;
+    z-index: 0;
+  }
+
+  /* ===== Scene-specific moods ===== */
+
+  /* Warm gold — heaven, happy outdoor scenes */
+  .mood-heaven {
+    background: linear-gradient(160deg, #fef6e4 0%, #fff3d6 50%, #ffefc2 100%);
+  }
+  .mood-heaven .ko { color: rgba(180, 140, 50, 0.5); }
+
+  /* Green mountain — nature, mountain scenes */
+  .mood-mountain {
+    background: linear-gradient(160deg, #f0f7ed 0%, #e8f2e0 50%, #f5f9f0 100%);
+  }
+  .mood-mountain .ko { color: rgba(80, 130, 70, 0.45); }
+
+  /* Warm peach — friendship, warmth */
+  .mood-warm {
+    background: linear-gradient(160deg, #fef0e8 0%, #fde8d8 50%, #fff5ee 100%);
+  }
+  .mood-warm .ko { color: rgba(180, 100, 70, 0.45); }
+
+  /* Dark blue — cave, tension */
+  .mood-cave {
+    background: linear-gradient(160deg, #e8e4f0 0%, #ddd6ea 50%, #eae4f2 100%);
+  }
+  .mood-cave .en { color: #2a2040; }
+  .mood-cave .ko { color: rgba(100, 70, 140, 0.5); }
+
+  /* Deep emotional — transformation, breakthrough */
+  .mood-transform {
+    background: linear-gradient(160deg, #fef6e4 0%, #fce4d6 30%, #f0e0f0 100%);
+  }
+  .mood-transform .ko { color: rgba(160, 100, 160, 0.5); }
+
+  /* Sunset — ending, warmth, peace */
+  .mood-sunset {
+    background: linear-gradient(160deg, #fef0e0 0%, #fde0d0 40%, #f8e0e8 100%);
+  }
+  .mood-sunset .ko { color: rgba(160, 100, 80, 0.5); }
+
+  .divider {
+    width: 40px;
+    height: 3px;
+    background: currentColor;
+    opacity: 0.15;
+    margin: 0 auto 20px;
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Spread 1 — Title Page</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-01-v2.png" alt="Title">
+  </div>
+  <div class="page-text mood-heaven">
+    <span class="deco deco-top-right">☁️</span>
+    <span class="deco deco-bottom-left">⛰️</span>
+    <div class="en" style="font-size: 22px; font-weight: 800;">
+      The Story of Dangun
+    </div>
+    <div class="ko" style="font-size: 26px; font-weight: 700;">
+      단군 이야기
+    </div>
+    <div style="margin-top: 16px; font-size: 14px; color: rgba(0,0,0,0.35); font-style: italic;">How Korea Began</div>
+    <div class="page-num">1</div>
+  </div>
+</div>
+
+<h2>Spread 2 — The Prince Who Looked Down</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-02-v2.png" alt="Prince Hwanung">
+  </div>
+  <div class="page-text mood-heaven">
+    <span class="deco deco-top-right">✨</span>
+    <span class="deco-small" style="bottom: 60px; right: 30px;">☁️</span>
+    <div class="divider"></div>
+    <div class="en">
+      Way up above the clouds, higher than the highest mountain,<br>
+      there lived a prince named Hwanung.<br><br>
+      Every morning, Hwanung walked to<br>
+      the edge of heaven and looked down.
+    </div>
+    <div class="ko">
+      구름보다 높은 곳에<br>
+      환웅이라는 왕자가 살고 있었어요.<br><br>
+      매일 아침, 환웅은 하늘 끝에 서서<br>
+      아래를 내려다보았어요.
+    </div>
+    <div class="page-num">2 — 3</div>
+  </div>
+</div>
+
+<h2>Spread 3 — What He Saw</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-04-v2.png" alt="Korean landscape">
+  </div>
+  <div class="page-text mood-mountain">
+    <span class="deco deco-top-right">🌿</span>
+    <span class="deco-small" style="top: 40px; left: 20px;">🏔️</span>
+    <div class="divider"></div>
+    <div class="en">
+      He saw rivers that twisted like silver ribbons.<br>
+      He saw mountains with trees so green<br>
+      they looked like they were breathing.<br><br>
+      "I want to help them,"<br>
+      Hwanung whispered.
+    </div>
+    <div class="ko">
+      은빛 리본처럼 구불구불한 강이 보였어요.<br>
+      숨을 쉬는 것처럼 푸른 나무가 가득한 산.<br><br>
+      "저 사람들을 돕고 싶어요,"<br>
+      환웅이 속삭였어요.
+    </div>
+    <div class="page-num">4 — 5</div>
+  </div>
+</div>
+
+<h2>Spread 4 — Three Thousand Friends</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-06-v2.png" alt="Hwanung descends">
+  </div>
+  <div class="page-text mood-heaven">
+    <span class="deco deco-top-right">💫</span>
+    <span class="deco-small" style="bottom: 80px; left: 25px;">🌧️</span>
+    <div class="divider"></div>
+    <div class="en">
+      His father smiled. "Then go," he said.<br><br>
+      And he gave Hwanung three thousand helpers<br>
+      and three magical gifts:<br>
+      the power of wind, the power of rain,<br>
+      and the power of clouds.<br><br>
+      Hwanung flew down to the tallest mountain —<br>
+      a mountain called Baekdu.
+    </div>
+    <div class="ko">
+      "그럼 가거라," 왕이 말했어요.<br><br>
+      바람의 힘, 비의 힘, 구름의 힘.<br><br>
+      환웅은 백두산으로 날아갔어요.
+    </div>
+    <div class="page-num">6 — 7</div>
+  </div>
+</div>
+
+<h2>Spread 5 — Two Friends on a Mountain</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-08-v2.png" alt="Ho-rang and Gom-i">
+  </div>
+  <div class="page-text mood-warm">
+    <span class="deco deco-top-right">🐾</span>
+    <span class="deco-small" style="bottom: 50px; right: 25px;">🌸</span>
+    <div class="divider"></div>
+    <div class="en">
+      Now, on that mountain lived two friends.<br><br>
+      A tiger named Ho-rang,<br>
+      who was loud and fast<br>
+      and never, ever sat still.<br><br>
+      And a bear named Gom-i,<br>
+      who was quiet and warm<br>
+      and could wait for anything.
+    </div>
+    <div class="ko">
+      그 산에는 두 친구가 살고 있었어요.<br><br>
+      시끄럽고 빠른 호랑이, 호랑.<br><br>
+      조용하고 따뜻한 곰, 곰이.
+    </div>
+    <div class="page-num">8 — 9</div>
+  </div>
+</div>
+
+<h2>Spread 6 — The Wish</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-10-v2.png" alt="Meeting Hwanung">
+  </div>
+  <div class="page-text mood-warm">
+    <span class="deco deco-top-right">🌳</span>
+    <div class="divider"></div>
+    <div class="en">
+      "We want to become human," they said.<br>
+      "We want to walk in the villages<br>
+      and eat warm rice<br>
+      and sing songs around the fire."<br><br>
+      Hwanung looked at them for a long time.<br><br>
+      "I can help you.<br>
+      But it will be very, very hard."
+    </div>
+    <div class="ko">
+      "사람이 되고 싶어요."<br><br>
+      "도와줄 수 있어.<br>
+      하지만 아주, 아주 힘들 거야."
+    </div>
+    <div class="page-num">10 — 11</div>
+  </div>
+</div>
+
+<h2>Spread 7 — The Test</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-12-v2.png" alt="Garlic and mugwort">
+  </div>
+  <div class="page-text mood-cave">
+    <span class="deco deco-bottom-left">🕯️</span>
+    <div class="divider"></div>
+    <div class="en">
+      "Go into the dark cave," he said.<br>
+      "Eat only this. See no sunlight.<br>
+      If you can last one hundred days…<br>
+      you will become human."<br><br>
+      Ho-rang grabbed the garlic.<br>
+      "Easy!" he said.<br><br>
+      Gom-i said nothing.<br>
+      She just walked into the darkness.
+    </div>
+    <div class="ko">
+      "백 일을 견딜 수 있다면…<br>
+      사람이 될 것이다."<br><br>
+      "쉽지!" 호랑이 말했어요.<br><br>
+      곰이는 어둠 속으로 걸어갔어요.
+    </div>
+    <div class="page-num">12 — 13</div>
+  </div>
+</div>
+
+<h2>Spread 8 — Ho-rang Gives Up</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-14-v2.png" alt="Tiger leaves">
+  </div>
+  <div class="page-text mood-cave">
+    <span class="deco deco-top-right">☀️</span>
+    <div class="divider"></div>
+    <div class="en">
+      Day one: "This garlic is TERRIBLE."<br><br>
+      Day ten: "I MISS the sun."<br><br>
+      Day twenty: "I CAN'T DO THIS!"<br>
+      He burst out of the cave<br>
+      and ran into the bright, bright sunlight.<br><br>
+      Gom-i watched him go.<br>
+      But she stayed.
+    </div>
+    <div class="ko">
+      첫째 날: "이 마늘 정말 끔찍해!"<br><br>
+      열째 날: "햇빛이 그리워!"<br><br>
+      스무째 날: "못 참겠어!"<br><br>
+      하지만 곰이는 남았어요.
+    </div>
+    <div class="page-num">14 — 15</div>
+  </div>
+</div>
+
+<h2>Spread 9 — Just One More Day</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-16-v2.png" alt="Gom-i dreaming">
+  </div>
+  <div class="page-text mood-cave">
+    <span class="deco deco-top-right">💭</span>
+    <span class="deco-small" style="bottom: 40px; left: 20px;">🍚</span>
+    <div class="divider"></div>
+    <div class="en">
+      Day thirty. Day fifty. Day seventy.<br><br>
+      Gom-i sang little songs in the dark.<br>
+      She counted her heartbeats.<br>
+      She thought about warm rice<br>
+      and all the things she wanted so badly.<br><br>
+      "Just one more day.<br>
+      Just one more day."
+    </div>
+    <div class="ko">
+      서른째 날. 쉰째 날. 일흔째 날.<br><br>
+      어둠 속에서 작은 노래를 불렀어요.<br><br>
+      "하루만 더. 하루만 더."
+    </div>
+    <div class="page-num">16 — 17</div>
+  </div>
+</div>
+
+<h2>Spread 10 — Day One Hundred</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-18-v2.png" alt="Transformation">
+  </div>
+  <div class="page-text mood-transform">
+    <span class="deco deco-top-right">✨</span>
+    <span class="deco-small" style="top: 30px; left: 25px;">🌅</span>
+    <div class="divider"></div>
+    <div class="en">
+      On the hundredth morning,<br>
+      something happened.<br><br>
+      Gom-i looked down at her paws —<br>
+      but they weren't paws anymore.<br>
+      They were hands.<br>
+      Small, human hands.<br><br>
+      She laughed. She cried.<br>
+      She spun around under the blue, blue sky.<br><br>
+      She was human.
+    </div>
+    <div class="ko">
+      백 번째 아침, 무언가 일어났어요.<br><br>
+      손이었어요. 작고 사람의 손.<br><br>
+      사람이 된 거예요.
+    </div>
+    <div class="page-num">18 — 19</div>
+  </div>
+</div>
+
+<h2>Spread 11 — A New Beginning</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-20-v2.png" alt="Wedding and Dangun">
+  </div>
+  <div class="page-text mood-heaven">
+    <span class="deco deco-top-right">🌅</span>
+    <span class="deco-small" style="bottom: 60px; right: 30px;">👶</span>
+    <div class="divider"></div>
+    <div class="en">
+      They married under the sacred tree<br>
+      on Baekdu Mountain,<br>
+      and they had a son.<br>
+      They named him Dangun.<br><br>
+      Dangun grew up to build<br>
+      the very first kingdom of Korea.<br>
+      He called it Joseon —<br>
+      the Land of Morning Calm.<br><br>
+      And it all began<br>
+      with a bear who wouldn't give up.
+    </div>
+    <div class="ko">
+      이름은 단군이었어요.<br><br>
+      조선 — 고요한 아침의 나라.<br><br>
+      포기하지 않은 곰 한 마리에서<br>
+      시작되었어요.
+    </div>
+    <div class="page-num">20 — 21</div>
+  </div>
+</div>
+
+<h2>Spread 12 — Back Page</h2>
+<div class="book-spread">
+  <div class="page-image">
+    <img src="images/page-22-v2.png" alt="Ho-rang and Gom-i at sunset">
+  </div>
+  <div class="page-text mood-sunset">
+    <span class="deco deco-top-right">🌙</span>
+    <span class="deco-small" style="bottom: 50px; left: 20px;">✨</span>
+    <div class="divider"></div>
+    <div class="en">
+      And that is how Korea began.<br><br>
+      But what about Ho-rang?<br><br>
+      Don't worry — he's still out there,<br>
+      running through the mountains.<br><br>
+      And every time Gom-i tells this story,<br>
+      he sits right next to her and says:<br><br>
+      "Tell them about the garlic!<br>
+      Tell them how TERRIBLE it was!"<br><br>
+      <em>The End.</em>
+    </div>
+    <div class="ko">
+      이렇게 한국이 시작되었어요.<br><br>
+      "마늘 이야기 해줘!<br>
+      얼마나 끔찍했는지!"<br><br>
+      <em>끝.</em>
+    </div>
+    <div class="page-num">22</div>
+  </div>
+</div>
+
+</body>
+</html>

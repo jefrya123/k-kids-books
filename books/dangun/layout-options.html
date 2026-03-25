@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout Options — Pick Your Favorite</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f0eb;
+    font-family: 'Nunito', sans-serif;
+    color: #3a2a1a;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1 { text-align: center; margin: 20px 0; font-size: 24px; }
+  h2 { margin: 40px 0 16px; font-size: 20px; color: #c9a0dc; border-bottom: 2px solid #e8ddf0; padding-bottom: 8px; }
+  .description { color: #888; font-size: 14px; margin-bottom: 20px; }
+
+  /* Shared book simulation */
+  .book-spread {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 16px;
+    max-width: 850px;
+  }
+  .book-spread img {
+    display: block;
+    object-fit: cover;
+  }
+
+  /* ========== LAYOUT A: Image Left, Text Right (Spread) ========== */
+  .layout-a .book-spread {
+    height: 425px;
+  }
+  .layout-a .page-image {
+    width: 50%;
+    height: 100%;
+  }
+  .layout-a .page-image img {
+    width: 100%;
+    height: 100%;
+  }
+  .layout-a .page-text {
+    width: 50%;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fdf9f3;
+  }
+  .layout-a .en {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 20px;
+    color: #3a2a1a;
+  }
+  .layout-a .ko {
+    font-family: 'Gaegu', cursive;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #8a7a9a;
+    border-left: 3px solid #c9a0dc;
+    padding-left: 14px;
+  }
+
+  /* ========== LAYOUT B: Image Top, Text Bottom Band ========== */
+  .layout-b .book-page {
+    width: 425px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 16px;
+  }
+  .layout-b .page-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .layout-b .page-text {
+    padding: 20px 28px 24px;
+    background: linear-gradient(180deg, #fef9f0 0%, #fff 100%);
+  }
+  .layout-b .en {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    color: #3a2a1a;
+  }
+  .layout-b .ko {
+    font-family: 'Gaegu', cursive;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #8a7a9a;
+    border-left: 3px solid #c9a0dc;
+    padding-left: 12px;
+  }
+
+  /* ========== LAYOUT C: Full Image Page + Full Text Page (alternating) ========== */
+  .layout-c .book-spread {
+    height: 425px;
+  }
+  .layout-c .page-image {
+    width: 50%;
+    height: 100%;
+  }
+  .layout-c .page-image img {
+    width: 100%;
+    height: 100%;
+  }
+  .layout-c .page-text {
+    width: 50%;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fdf6ec;
+    text-align: center;
+  }
+  .layout-c .en {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    color: #3a2a1a;
+  }
+  .layout-c .ko {
+    font-family: 'Gaegu', cursive;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #c9a0dc;
+  }
+  .layout-c .page-num {
+    font-size: 11px;
+    color: #ccc;
+    margin-top: 20px;
+  }
+
+  /* ========== LAYOUT D: Image with colored text band overlay ========== */
+  .layout-d .book-page {
+    width: 425px;
+    height: 425px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 16px;
+  }
+  .layout-d .page-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .layout-d .page-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 24px 22px;
+    background: linear-gradient(0deg, rgba(253,246,236,0.95) 0%, rgba(253,246,236,0.92) 70%, rgba(253,246,236,0) 100%);
+  }
+  .layout-d .en {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: #3a2a1a;
+    font-weight: 600;
+  }
+  .layout-d .ko {
+    font-family: 'Gaegu', cursive;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #7a6a8a;
+  }
+
+  /* ========== LAYOUT E: OG HTML Preview style (scrollable, not paged) ========== */
+  .layout-e .book-page {
+    max-width: 500px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin-bottom: 24px;
+  }
+  .layout-e .page-image img {
+    width: 100%;
+    display: block;
+  }
+  .layout-e .page-text {
+    padding: 20px 24px;
+  }
+  .layout-e .page-label {
+    font-size: 11px;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 24px 0;
+  }
+  .layout-e .en {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: #3a2a1a;
+  }
+  .layout-e .ko {
+    font-family: 'Gaegu', cursive;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+    border-left: 3px solid #c9a0dc;
+    padding-left: 16px;
+  }
+
+  .label {
+    display: inline-block;
+    background: #c9a0dc; color: white;
+    padding: 3px 10px; border-radius: 12px;
+    font-size: 11px; font-weight: 700;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Layout Options — Which One Feels Right?</h1>
+<p style="text-align:center; color:#888; margin-bottom:40px;">Same story page shown 5 different ways. Pick your favorite!</p>
+
+<!-- ===== LAYOUT A ===== -->
+<h2>Layout A — Image Left, Text Right (Book Spread)</h2>
+<p class="description">Classic children's book spread. Image gets a full page, text faces it. Good for bilingual — plenty of room for both languages. This is how most KDP bilingual books work.</p>
+
+<div class="layout-a">
+  <div class="book-spread">
+    <div class="page-image">
+      <img src="images/page-14-v2.png" alt="Ho-rang gives up">
+    </div>
+    <div class="page-text">
+      <div class="en">
+        Day one: Ho-rang paced back and forth. "This garlic is TERRIBLE," he said.<br><br>
+        Day ten: Ho-rang scratched the walls. "I MISS the sun," he growled.<br><br>
+        Day twenty: Ho-rang's eyes went wide. "I CAN'T DO THIS!" he roared — and he burst out of the cave and ran into the bright, bright sunlight.<br><br>
+        Gom-i watched him go. Her stomach hurt. Her eyes hurt. She missed the sky so much it made her chest ache.<br><br>
+        But she stayed.
+      </div>
+      <div class="ko">
+        첫째 날: 호랑이 왔다 갔다 했어요. "이 마늘 정말 끔찍해!"<br><br>
+        열째 날: 호랑이 벽을 긁었어요. "햇빛이 그리워!"<br><br>
+        스무째 날: "못 참겠어!" 호랑이 포효하며 — 동굴 밖으로 뛰쳐나갔어요.<br><br>
+        곰이는 호랑이 가는 모습을 지켜보았어요. 하지만 곰이는 남았어요.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LAYOUT B ===== -->
+<h2>Layout B — Image Top, Text Bottom</h2>
+<p class="description">Square page. Big image on top, text band below. Simple, clean. Similar to your OG HTML preview but as a single page.</p>
+
+<div class="layout-b">
+  <div class="book-page">
+    <div class="page-image">
+      <img src="images/page-14-v2.png" alt="Ho-rang gives up">
+    </div>
+    <div class="page-text">
+      <div class="en">
+        Day one: Ho-rang paced back and forth. "This garlic is TERRIBLE," he said. Day ten: Ho-rang scratched the walls. "I MISS the sun," he growled. Day twenty: "I CAN'T DO THIS!" he roared — and he burst out of the cave. Gom-i watched him go. But she stayed.
+      </div>
+      <div class="ko">
+        첫째 날: "이 마늘 정말 끔찍해!" 열째 날: "햇빛이 그리워!" 스무째 날: "못 참겠어!" — 동굴 밖으로 뛰쳐나갔어요. 곰이는 남았어요.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LAYOUT C ===== -->
+<h2>Layout C — Spread with Centered Text (Storybook Feel)</h2>
+<p class="description">Image left, centered text right on warm background. Feels cozy and premium. The centered text reads like a bedtime story.</p>
+
+<div class="layout-c">
+  <div class="book-spread">
+    <div class="page-image">
+      <img src="images/page-14-v2.png" alt="Ho-rang gives up">
+    </div>
+    <div class="page-text">
+      <div class="en">
+        Day one: Ho-rang paced back and forth.<br>
+        "This garlic is TERRIBLE," he said.<br><br>
+        Day ten: Ho-rang scratched the walls.<br>
+        "I MISS the sun," he growled.<br><br>
+        Day twenty: "I CAN'T DO THIS!" he roared —<br>
+        and he burst out of the cave.<br><br>
+        Gom-i watched him go.<br>
+        But she stayed.
+      </div>
+      <div class="ko">
+        첫째 날: "이 마늘 정말 끔찍해!"<br>
+        열째 날: "햇빛이 그리워!"<br>
+        스무째 날: "못 참겠어!"<br><br>
+        곰이는 남았어요.
+      </div>
+      <div class="page-num">14 — 15</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LAYOUT D ===== -->
+<h2>Layout D — Full Image with Text Overlay Fade</h2>
+<p class="description">Image fills the whole page. Text fades in from the bottom over a warm gradient. Dramatic, immersive. Works when text is short.</p>
+
+<div class="layout-d">
+  <div class="book-page">
+    <div class="page-image">
+      <img src="images/page-14-v2.png" alt="Ho-rang gives up">
+    </div>
+    <div class="page-text">
+      <div class="en">
+        Day twenty: "I CAN'T DO THIS!" he roared — and he burst out of the cave. Gom-i watched him go. But she stayed.
+      </div>
+      <div class="ko">
+        "못 참겠어!" — 동굴 밖으로 뛰쳐나갔어요. 곰이는 남았어요.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LAYOUT E ===== -->
+<h2>Layout E — Scrollable (Your OG HTML Style)</h2>
+<p class="description">Not really a "book page" — more like a web reading experience. This is what your original preview HTML looked like. Great for digital/phone viewing, not for print.</p>
+
+<div class="layout-e">
+  <div class="book-page">
+    <div class="page-label">Pages 14-15 — Ho-rang Gives Up</div>
+    <div class="page-image">
+      <img src="images/page-14-v2.png" alt="Ho-rang gives up">
+    </div>
+    <div class="page-text">
+      <div class="en">
+        Day one: Ho-rang paced back and forth. "This garlic is TERRIBLE," he said.<br><br>
+        Day ten: Ho-rang scratched the walls. "I MISS the sun," he growled.<br><br>
+        Day twenty: Ho-rang's eyes went wide. "I CAN'T DO THIS!" he roared — and he burst out of the cave and ran into the bright, bright sunlight.<br><br>
+        Gom-i watched him go. Her stomach hurt. Her eyes hurt. She missed the sky so much it made her chest ache.<br><br>
+        But she stayed.
+      </div>
+      <div class="ko">
+        첫째 날: 호랑이 왔다 갔다 했어요. "이 마늘 정말 끔찍해!" 호랑이 말했어요.<br><br>
+        열째 날: 호랑이 벽을 긁었어요. "햇빛이 그리워!" 호랑이 으르렁거렸어요.<br><br>
+        스무째 날: 호랑의 눈이 커졌어요. "못 참겠어!" 호랑이 포효하며 — 동굴 밖으로 뛰쳐나가 밝은, 밝은 햇빛 속으로 달려갔어요.<br><br>
+        곰이는 호랑이 가는 모습을 지켜보았어요. 배가 아팠어요. 눈이 아팠어요. 하늘이 너무 그리워서 가슴이 아렸어요.<br><br>
+        하지만 곰이는 남았어요.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center; padding:40px; color:#bbb; font-size:13px;">
+  Which layout do you like? We can mix and match too —<br>
+  e.g. Layout C for print books, Layout E for Gumroad digital.
+</div>
+
+</body>
+</html>
